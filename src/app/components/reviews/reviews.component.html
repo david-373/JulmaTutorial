@@ -1,0 +1,106 @@
+<div class="body">
+    <h4>Reviews</h4>
+    <div class="reviews-div">
+        <div>
+            <div class="star-div">
+                <div class="star-div-">
+                    <i class="fas fa-star big-star"></i>
+                    <p style="margin-top: 14px;
+                    font-weight: 600;">Rating</p>
+                    <h4 style="color: #ffb901;
+                    font-family: cursive;
+                    font-size: 26px;
+                    margin-bottom: 15px">4.00</h4>
+                    <p style="font-size: 12px;
+                    color: #919ca2;">Average Rating</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-div">
+                <div class="Stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="progress" *ngFor="let progData of reviewsProgressData">
+                    <mat-progress-bar mode="determinate" value="{{progData.number}}"></mat-progress-bar>
+                    <div class="mat-progress-bar-data">
+                        <p style="font-size: 14px;color: #919ca2;
+                        padding: 5px 4px 0px 0px;">({{progData.number}})</p>
+                        <p style="font-size: 14px;
+                        color: #8b8fa3;
+                        font-weight: 600;"><i class="fas fa-star" style="color: #ffb901;
+                            font-size: 14px;
+                            margin-left: 5px;"></i>{{progData.star}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="drop-down-div">
+        <i class="fas fa-grip-lines"></i>
+        <div class="filter">
+            <p>Filter by</p>
+        </div>
+        <div class="date">
+            <p (click)="onSelect()" [ngClass]="{'color':color}">
+                Date<i class=" fas fa-caret-down" *ngIf="!color"></i>
+                <i class="fas fa-caret-up" *ngIf="color"></i>
+            </p>
+            <mat-calendar name="appointment_date" [hidden]="!selectedDate">
+            </mat-calendar>
+        </div>
+        <div class="all-product">
+            <p [ngClass]="{'color':nameColor}" (click)="onSelectName()">
+                All product<i class=" fas fa-caret-down" *ngIf="!nameColor"></i>
+                <i class="fas fa-caret-up" *ngIf="nameColor"></i>
+
+            </p>
+            <div [hidden]="!nameColor" class="products-div">
+                <div class="product">
+                    <p>All product</p>
+                    <p>Product name name name</p>
+                    <p>Product name name name</p>
+                    <p>Product name name name</p>
+                    <p>Product name name name</p>
+                    <p>Product name name name</p>
+                    <p>Product name name name</p>
+                </div>
+            </div>
+        </div>
+        <div class="refresh">
+            <i class="fas fa-redo-alt"></i>
+            <p>Refresh </p>
+        </div>
+    </div>
+    <div class="user-cards-div">
+        <div class="user-card" *ngFor="let user of reviewsUsersCardData">
+            <div class="user-data-div">
+                <img src="{{user.img}}" alt="">
+                <h6>{{user.fullName}}</h6>
+                <p>{{user.online}} minutes ago</p>
+            </div>
+            <div class="card-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <div class="card-text">
+                <p>
+                    {{user.text}}
+                </p>
+            </div>
+            <button>Reply</button>
+        </div>
+    </div>
+</div>

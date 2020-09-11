@@ -1,0 +1,553 @@
+.body {
+    height: 100%;
+    width: 96%;
+    margin: auto;
+    margin-top: 3%;
+    .color {
+        color: blue !important;
+    }
+}
+h4 {
+    color: #5c5cb9;
+    font-weight: 700;
+    font-size: 25px;
+}
+.card-progress-div {
+    width: 245px;
+    height: 118px;
+    margin-right: 35px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px aqua;
+    .div1 {
+        display: flex;
+        justify-content: space-between;
+        width: 220px;
+        margin: 0 auto;
+        margin-top: 10px;
+
+        p {
+            color: #6c757d;
+            font-size: 15px;
+        }
+        .i {
+            height: 40px;
+            width: 40px;
+            background-color: aqua;
+            border-radius: 50%;
+            i {
+                color: #6c6cf7;
+                padding: 27% 50% 50% 27%;
+            }
+        }
+    }
+    .num {
+        font-size: 19px;
+        font-weight: 700;
+        width: 215px;
+        margin: 0 auto;
+    }
+    .div2 {
+        display: flex;
+
+        width: 230px;
+        margin: 0 auto;
+        margin-top: 20px;
+        div {
+            width: 55px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 10px;
+            span {
+                color: #73c27d;
+            }
+            p {
+                font-size: 14px;
+                color: #73c27d;
+            }
+        }
+        p {
+            color: #6c757d;
+            font-size: 14px;
+        }
+    }
+}
+.sales-div {
+    background-color: white;
+    width: 1085px;
+    height: 375px;
+    border: 1px solid;
+    border-radius: 15px;
+    margin-top: 40px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px 1px cyan;
+    h6 {
+        font-size: 18px;
+        font-weight: 600;
+        height: 30px;
+        margin: 25px 10px 10px 30px;
+    }
+    #divChart {
+        height: 300px;
+        width: 1040px;
+        margin-right: 83px;
+    }
+
+    .sales-header {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+
+        .drops {
+            display: flex;
+            width: 660px;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        .monthly-container {
+            position: relative;
+
+            .monthly-drop-down {
+                display: flex;
+                width: 150px;
+                height: 35px;
+                justify-content: space-between;
+                border: 1px solid aqua;
+                border-radius: 6px;
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 125px;
+                    margin: 0 auto;
+                    margin-top: 6px;
+                    p {
+                        color: #6c757d;
+                    }
+                    i {
+                        padding-top: 4px;
+                        color: #6c757d;
+                    }
+                }
+            }
+            .monthy-drop-down-div {
+                position: absolute;
+                border: 1px solid aqua;
+                width: 150px;
+                top: 40px;
+                border-radius: 6px;
+                padding-left: 10px;
+                padding-top: 5px;
+                background-color: white;
+
+                p {
+                    font-size: 13px;
+                    color: #6c757d;
+                }
+            }
+        }
+
+        .date-picker-div {
+            display: flex;
+            width: 320px;
+            .mat-form-field {
+                width: 110px;
+                border: 1px solid aqua;
+                height: 35px;
+                border-radius: 6px;
+                ::ng-deep input.mat-input-element {
+                    color: #6c757d;
+                }
+                ::ng-deep .mat-form-field-underline {
+                    display: none;
+                }
+                ::ng-deep .mat-form-field-suffix .mat-icon-button {
+                    font-size: 20px;
+                    outline: none;
+                }
+                ::ng-deep .mat-form-field-wrapper {
+                    padding: 0;
+                }
+                ::ng-deep .mat-form-field-infix {
+                    padding: 0;
+                    padding-left: 5px;
+                }
+            }
+        }
+        .status-container {
+            position: relative;
+            .status-drop-down {
+                display: flex;
+                width: 125px;
+                height: 35px;
+                justify-content: space-between;
+                border: 1px solid aqua;
+                border-radius: 6px;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100px;
+                    margin: 0 auto;
+                    margin-top: 6px;
+
+                    p {
+                        color: #6c757d;
+                    }
+                    i {
+                        padding-top: 4px;
+                        color: #6c757d;
+                    }
+                }
+            }
+            .status-drop-down-div {
+                position: absolute;
+                border: 1px solid aqua;
+                width: 125px;
+                top: 40px;
+                border-radius: 6px;
+                padding-left: 10px;
+                padding-top: 5px;
+                background-color: white;
+
+                p {
+                    font-size: 13px;
+                    color: #6c757d;
+                }
+            }
+        }
+    }
+}
+.deales-div {
+    background-color: white;
+    width: 1085px;
+    height: 375px;
+    border: 1px solid;
+    border-radius: 15px;
+    margin-top: 40px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px 1px cyan;
+    h6 {
+        font-size: 18px;
+        font-weight: 600;
+        height: 30px;
+        margin: 25px 10px 10px 30px;
+    }
+
+    .deales-header {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+
+        .drops {
+            display: flex;
+            width: 660px;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        .monthly-container {
+            position: relative;
+
+            .monthly-drop-down {
+                display: flex;
+                width: 150px;
+                height: 35px;
+                justify-content: space-between;
+                border: 1px solid aqua;
+                border-radius: 6px;
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 125px;
+                    margin: 0 auto;
+                    margin-top: 6px;
+                    p {
+                        color: #6c757d;
+                    }
+                    i {
+                        padding-top: 4px;
+                        color: #6c757d;
+                    }
+                }
+            }
+            .monthy-drop-down-div {
+                position: absolute;
+                border: 1px solid aqua;
+                width: 150px;
+                top: 40px;
+                border-radius: 6px;
+                padding-left: 10px;
+                padding-top: 5px;
+                background-color: white;
+
+                p {
+                    font-size: 13px;
+                    color: #6c757d;
+                }
+            }
+        }
+
+        .date-picker-div {
+            display: flex;
+            width: 320px;
+            
+            .mat-form-field {
+                width: 110px;
+                border: 1px solid aqua;
+                height: 35px;
+                border-radius: 6px;
+                ::ng-deep input.mat-input-element {
+                    color: #6c757d;
+                }
+                ::ng-deep .mat-form-field-underline {
+                    display: none;
+                }
+                ::ng-deep .mat-form-field-suffix .mat-icon-button {
+                    font-size: 20px;
+                    outline: none;
+                }
+                ::ng-deep .mat-form-field-wrapper {
+                    padding: 0;
+                }
+               
+                ::ng-deep .mat-form-field-infix {
+                    padding: 0;
+                    padding-left: 5px;
+                }
+            }
+        }
+        .status-container {
+            position: relative;
+            .status-drop-down {
+                display: flex;
+                width: 125px;
+                height: 35px;
+                justify-content: space-between;
+                border: 1px solid aqua;
+                border-radius: 6px;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100px;
+                    margin: 0 auto;
+                    margin-top: 6px;
+
+                    p {
+                        color: #6c757d;
+                    }
+                    i {
+                        padding-top: 4px;
+                        color: #6c757d;
+                    }
+                }
+            }
+            .status-drop-down-div {
+                position: absolute;
+                border: 1px solid aqua;
+                width: 125px;
+                top: 40px;
+                border-radius: 6px;
+                padding-left: 10px;
+                padding-top: 5px;
+                background-color: white;
+
+                p {
+                    font-size: 13px;
+                    color: #6c757d;
+                }
+            }
+        }
+    }
+
+    .tablet {
+        background-color: #fff;
+        margin-top: 5px;
+        width: 1040px;
+        margin-left: 30px;
+    }
+
+    .thead- {
+        th {
+            background-color: #c4f4ff;
+            color: black;
+            font-size: 14px;
+            border-top: none;
+            border-bottom: none;
+        }
+        #first {
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        #last {
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    }
+    tbody {
+        border: none;
+        tr {
+            td {
+                color: #6c757d;
+                margin: 0;
+                font-size: 14px;
+                padding: 16px;
+                border-top: none;
+            }
+            a {
+                border-radius: 24px;
+                background-color: #c4f4ff;
+                padding: 6px 10px;
+                color: #a7a705;
+            }
+        }
+    }
+}
+.chart-cards-div {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 1085px;
+    justify-content: space-between;
+    .orders-card {
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        border: 1px solid white;
+        box-shadow: 1px 1px 1px 1px cyan;
+        background-color: #fff;
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 15px 0px 0px 20px;
+        }
+        #divDoughChart {
+            height: 150px;
+            width: 150px;
+            margin: 0 auto;
+        }
+        .date-div {
+            width: 270px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            margin-top: 50px;
+            .date {
+                p {
+                    margin: 0;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+                div {
+                    display: flex;
+                    margin: 0;
+                    justify-content: space-between;
+                    width: 75px;
+                    margin-top: 5px;
+                    p {
+                        color: #aabed0;
+                        font-weight: normal;
+                    }
+                    i {
+                        font-size: 10px;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .feature-product {
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 15px 0px 0px 20px;
+        }
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        border: 1px solid white;
+        box-shadow: 1px 1px 1px 1px cyan;
+        background-color: #fff;
+        .product-div {
+            position: relative;
+            text-align: center;
+            .carusele-button {
+                width: 250px;
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                top: 65px;
+                left: 25px;
+                div {
+                    height: 25px;
+                    width: 25px;
+                    background-color: #92ffff;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    :hover {
+                       color: yellowgreen;
+                    }
+                    i {
+                        font-size: 17px;
+                        padding-top: 3px;
+                        transition:0.3s;
+                    }
+                }
+            }
+            img {
+                width: 115px;
+                height: 115px;
+                border-radius: 50%;
+                margin-top: 15px;
+            }
+            div {
+                p {
+                    margin: 0;
+                }
+            }
+        }
+        .order-sales {
+            display: flex;
+            justify-content: space-between;
+            width: 220px;
+            margin: 0 auto;
+            margin-top: 10px;
+            div {
+                display: flex;
+                justify-content: space-between;
+                width: 75px;
+            }
+        }
+    }
+    .commisions-div {
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 15px 0px 0px 20px;
+        }
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        border: 1px solid white;
+        box-shadow: 1px 1px 1px 1px cyan;
+        background-color: #fff;
+        .circle-progress-div {
+            height: 175px;
+            width: 175px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        .-text-div {
+            width: 280px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10px;
+            p {
+                font-weight: 600;
+            }
+        }
+    }
+}

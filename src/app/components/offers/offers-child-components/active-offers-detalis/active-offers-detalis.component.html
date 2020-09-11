@@ -1,0 +1,71 @@
+<div class="active-offers-detalis-div">
+    <h2>01:50:23</h2>
+    <div class="price-div">
+        <div class="img">
+            <img src="{{offerData.img}}" alt="">
+        </div>
+        <div class="price">
+            <div class="buyers-price">
+                <h6>buyers</h6>
+                <h3 style=" text-decoration: line-through;">
+                    {{offerData.buyers.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+                <h3 style="color: #ed1f2c; font-weight: 600;">
+                    {{offerData.buyers.beforPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+            </div>
+            <div class="retailers-price">
+                <h6>Retailers</h6>
+                <h3 style="text-decoration: line-through;">
+                    {{offerData.Retailers.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+                <h3 style="color: #ed1f2c; font-weight: 600;">
+                    {{offerData.Retailers.beforPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+            </div>
+            <div class="wholesalers-price">
+                <h6>Wholesalers</h6>
+                <h3 style="text-decoration: line-through;">
+                    {{offerData.Wholesalers.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}
+                </h3>
+                <h3 style="color: #ed1f2c; font-weight: 600;">
+                    {{offerData.Wholesalers.beforPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="detalis-date-div">
+        <div class="name-div">
+            <h5>{{offerData.fullName}}{{offerData.fullName}}{{offerData.fullName}}</h5>
+            <h4>(Single offer)</h4>
+        </div>
+        <p style="margin-top: -5px;margin-bottom:8px;
+        font-size: 12px;
+        color: #9fa9ad;">{{offerData.city}}</p>
+        <div class="stars-div">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <p>{{offerData.reviews.star}} stars from {{offerData.reviews.review}} reviews</p>
+        </div>
+        <div class="date-whit-icons">
+            <div>
+                <i class="far fa-calendar"></i>
+                <p>{{offerData.date | date:'mediumDate'}}</p>
+            </div>
+            <div>
+                <i class="fas fa-heart"></i>
+                <p>{{offerData.likes}}</p>
+            </div>
+            <div>
+                <i class="fas fa-eye"></i>
+                <p>{{offerData.views}}</p>
+            </div>
+            <div>
+                <i class="fas fa-calendar-check"></i>
+                <p>{{offerData.order}} order</p>
+            </div>
+        </div>
+    </div>
+    <div class="btn-div">
+        <button style="background-color: #e2deff;color: #3a8fcd;">Edit offer</button>
+        <button style="background-color: #ffeae8;color: #f1444e;">Delete offer</button>
+    </div>
+</div>

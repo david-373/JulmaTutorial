@@ -1,0 +1,82 @@
+.body {
+    height: 94%;
+    width: 96%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+h4 {
+    color: #5c5cb9;
+    font-weight: 700;
+    font-size: 25px;
+}
+.body-div {
+    margin-top: 20px;
+    h6 {
+        color: red;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+    input {
+        width: 350px;
+        border-radius: 10px;
+        border: 1px solid #e3e5e6;
+        outline: none;
+    }
+    input::placeholder {
+        padding-left: 7px;
+        font-size: 13px;
+        color: #849197;
+    }
+    textarea {
+        outline: none;
+        resize: none;
+        width: 350px;
+        height: 120px;
+        border-radius: 10px;
+        border: 1px solid #e3e5e6;
+    }
+    textarea::placeholder {
+        font-size: 13px;
+        color: #849197;
+        padding-left: 7px;
+    }
+    .email {
+        margin-top: 20px;
+        input {
+            height: 35px;
+        }
+    }
+    .decription {
+        input {
+            height: 150px;
+            padding: 0px 0px 110px 5px;
+        }
+    }
+    button {
+        margin: 25px 95px 0px 95px;
+        background-color: #0978be;
+        border: none;
+        outline: none;
+        width: 145px;
+        height: 35px;
+        border-radius: 10px;
+        color: white;
+        font-size: 15px;
+    }
+}
+.bc-administrator {
+    width: 300px;
+    height: 350px;
+    background-image: url("../../../assets/images/personal-assistant.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: right;
+}

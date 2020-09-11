@@ -1,0 +1,98 @@
+.body {
+    display: inline-flex;
+    margin-top: 30px;
+    width: 760px;
+    .visitors-div {
+        display: inline-block;
+        background-color: white;
+        width: 350px;
+        height: 275px;
+        border-radius: 10px;
+        margin-right: 30px;
+        h3 {
+            width: 330px;
+            height: 30px;
+            background-color: aqua;
+            margin: 0 auto;
+            padding-left: 10px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .visitors-data {
+            display: flex;
+            padding: 5px 0px 0px 15px;
+            height: 0;
+            color: #0978be;
+        }
+        #visitorsDoughuntDiv {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        .visitorsDoughnutData {
+            display: flex;
+            justify-content: space-between;
+            width: 310px;
+            margin: 0 auto;
+            margin-top: 15px;
+            div {
+                display: flex;
+                i {
+                    font-size: 10px;
+                    margin-right: 5px;
+                    margin-top: 4px;
+                }
+                p {
+                    color: rgb(129 142 148);
+                }
+            }
+        }
+    }
+    .devices-div {
+        display: inline-block;
+        background-color: white;
+        width: 350px;
+        height: 275px;
+        border-radius: 10px;
+
+        h3 {
+            width: 330px;
+            height: 30px;
+            background-color: aqua;
+            margin: 0 auto;
+            padding-left: 10px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .device {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            margin-top: 40px;
+
+            #devicesPieDiv {
+                height: 140px;
+                width: 140px;
+                margin-left: 15px;
+            }
+            .devicesPieData {
+                display: grid;
+                width: 170px;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+
+                    i {
+                        font-size: 10px;
+                        margin-right: 5px;
+                        margin-top: 4px;
+                    }
+                    p {
+                        color: rgb(129 142 148);
+                    }
+                }
+            }
+        }
+    }
+}

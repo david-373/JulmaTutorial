@@ -1,0 +1,219 @@
+.body {
+    height: 94%;
+    width: 96%;
+    margin: auto;
+    margin-top: 3%;
+
+    h4 {
+        color: #5c5cb9;
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .wallet-date-div {
+        display: flex;
+        justify-content: space-between;
+        width: 520px;
+        margin-top: 30px;
+        .wallet-date {
+            display: flex;
+            border: 1px solid #dbdbf8;
+            height: 40px;
+            width: 400px;
+            border-radius: 10px;
+            justify-content: space-between;
+            background-color: white;
+            .inp-date {
+                display: flex;
+                justify-content: space-between;
+                width: 65px;
+                margin: 10px 0px 0px 10px;
+                height: 20px;
+                border-right: 1px solid #dbdbf8;
+                color: red;
+                p {
+                    font-weight: 600;
+                    font-size: 13px;
+                    margin-right: 10px;
+                }
+                i {
+                    font-size: 15px;
+                    margin-top: 1px;
+                }
+            }
+            .data-picker-div {
+                width: 180px;
+                border-right: 1px solid #dfdfdf;
+                .mat-form-field {
+                    width: 190px;
+                    padding: 0px 30px 0px 0px;
+
+                    ::ng-deep .mat-form-field-wrapper {
+                        padding: 0;
+                    }
+                    ::ng-deep .mat-form-field-flex {
+                        padding: 0;
+                        background: none;
+                    }
+                    ::ng-deep .mat-form-field-underline {
+                        display: none;
+                    }
+                    ::ng-deep.mat-icon {
+                        margin: 0;
+                        line-height: 0;
+                        height: 0;
+                        display: inherit;
+                    }
+                    ::ng-deep .mat-icon-button {
+                        height: 10px;
+                        width: 10px;
+                        outline: none;
+                    }
+                    ::ng-deep .mat-form-field-infix {
+                        padding: 0px 0px 0px 0px;
+                        border: none;
+                    }
+                }
+            }
+            .order-status {
+                width: 100px;
+                color: #6c757d;
+                cursor: pointer;
+                margin-right: 10px;
+                margin-top: 10px;
+                position: relative;
+                i {
+                    margin-top: 3px;
+                }
+                .status-div {
+                    background-color: white;
+                    width: 300px;
+                    height: 115px;
+                    text-align: center;
+                    box-shadow: 2px 1px 14px 4px #ffe1e1;
+                    border-left: none;
+                    border-radius: 6px;
+                    position: absolute;
+                    top: 30px;
+                    left: -30px;
+                    .statuss {
+                        justify-content: space-between;
+                        width: 285px;
+                        margin: 0 auto;
+                        border: none;
+                        display: block;
+                        height: 65px;
+                        margin-top: 10px;
+
+                        p {
+                            border-radius: 10px;
+                            width: 85px;
+                            display: inline-block;
+                        }
+                    }
+                    button {
+                        outline: none;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: #5c5cb9;
+                        color: white;
+                        width: 110px;
+                        height: 28px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        .print-btn {
+            height: 25px;
+            width: 80px;
+            background-color: aqua;
+            margin-top: 8px;
+            border-radius: 13px;
+            justify-content: space-between;
+            text-align: center;
+            div {
+                display: flex;
+                justify-content: space-between;
+                width: 55px;
+                margin: 0 auto;
+
+                button {
+                    outline: none;
+                    border: none;
+                    background-color: aqua;
+                    color: #4e9ed0;
+                }
+                i {
+                    color: #4e9ed0;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+    .electronic-payment-div {
+        background-color: white;
+        width: 1100px;
+        margin-top: 30px;
+        border-radius: 10px;
+        border: 1px solid white;
+        box-shadow: 1px 1px 1px 1px cyan;
+        .tablet {
+            background-color: #fff;
+            width: 1040px;
+            padding-top: 30px;
+            margin: 0 auto;
+        }
+
+        .thead- {
+            th {
+                background-color: #c4f4ff;
+                color: black;
+                font-size: 15px;
+                border-top: none;
+                border-bottom: none;
+            }
+            #first {
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+            #last {
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+        }
+        tbody {
+            border: none;
+            tr {
+                td {
+                    color: #a6b1b5;
+                    margin: 0;
+                    font-size: 15px;
+                    padding: 16px;
+                    border-top: none;
+                }
+                .debit {
+                    color: #4e9ed0;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+                .credit {
+                    color: #f3737b;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .electronics-payment-data-div {
+        height: 60px;
+        width: 295px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        font-weight: 600;
+        margin-left: 730px;
+        color: #4e9ed0;
+    }
+}

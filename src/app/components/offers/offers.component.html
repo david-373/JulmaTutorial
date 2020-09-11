@@ -1,0 +1,65 @@
+<div class="body">
+    <h4>Offset</h4>
+    <div class="drop-down-div">
+        <i class="fas fa-grip-lines"></i>
+        <div class="filter">
+            <p>Filter by</p>
+        </div>
+        <div class="offer-type">
+            <p [ngClass]="{'color':offerActiv}" (click)="onSelectOffer()">
+                Offer type<i class=" fas fa-caret-down" *ngIf="!offerActiv"></i>
+                <i class="fas fa-caret-up" *ngIf="offerActiv"></i>
+            </p>
+            <div [hidden]="!offerActiv" class="offer-div">
+                <div class="pides">
+                    <p style="background-color: #c4f4ff; color: red;">Single offer</p>
+                    <p style="border: 2px solid #c4f4ff;">Bonus Offer</p>
+                    <p style="border: 2px solid #c4f4ff;width: 150px;">Bonus new product</p>
+                </div>
+                <button>Apply Now</button>
+            </div>
+        </div>
+        <div class="location" (click)="onSelectLocation()">
+            <p [ngClass]="{'color':locationActiv}">
+                Location<i class=" fas fa-caret-down" *ngIf="!locationActiv"></i>
+                <i class="fas fa-caret-up" *ngIf="locationActiv"></i>
+
+            </p>
+            <div [hidden]="!locationActiv" class="location-div">
+                <div class="loc">
+                    <p style="color:#1b82c3;">All location</p>
+                    <p>Location name name </p>
+                    <p>Location name name </p>
+                    <p>Location name name </p>
+                    <p>Location name name </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="type-customer">
+            <p [ngClass]="{'color':customerTypeActiv}" (click)="onSelectType()">
+                Type customer <i class=" fas fa-caret-down" *ngIf="!customerTypeActiv"></i>
+                <i class="fas fa-caret-up" *ngIf="customerTypeActiv"></i>
+            </p>
+            <div [hidden]="!customerTypeActiv" class="customer-div">
+                <div class="types">
+                    <p style="background-color: #c4f4ff; color: red;">Retailers</p>
+                    <p style="border: 2px solid #c4f4ff;">Wholeselers</p>
+                    <p style="background-color: #c4f4ff; color:red;">Buyes</p>
+
+                </div>
+
+                <button>Apply Now</button>
+            </div>
+        </div>
+
+        <div class="refresh">
+            <i class="fas fa-redo-alt"></i>
+            <p>Refresh </p>
+        </div>
+        <button class="customer-button">Add new offer</button>
+
+    </div>
+
+    <app-active-previous-offers></app-active-previous-offers>
+</div>

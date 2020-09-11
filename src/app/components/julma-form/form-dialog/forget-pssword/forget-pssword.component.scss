@@ -1,0 +1,70 @@
+::ng-deep .mat-dialog-container {
+    border-radius: 10px;
+    width: 315px;
+    overflow: hidden;
+    position: relative;
+}
+.dialog-div {
+    i {
+        position: absolute;
+        top: 11px;
+        right: 15px;
+        font-size: 16px;
+    }
+    p {
+        margin: 3px;
+        font-weight: 600;
+        font-size: 13px;
+    }
+    input {
+        outline: none;
+        border: 1px solid #e3e3e3;
+        width: 240px;
+        height: 35px;
+        border-radius: 6px;
+        margin-bottom: 5px;
+    }
+    input::placeholder {
+        color: #818e94;
+    }
+    input[type="text"] {
+        color: #818e94;
+        padding-left: 5px;
+        font-size: 12px;
+    }
+    .digit {
+        width: 37px;
+        height: 45px;
+        margin-right: 10px;
+    }
+    .digit[type="text"] {
+        padding-left: 14px;
+        font-size: 15px;
+    }
+    .verification-div {
+        text-align: center;
+        h2 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 12px;
+            color: #818e94;
+            font-weight: 100;
+        }
+    }
+
+    button {
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        width: 240px;
+        height: 35px;
+        background-color: #0978be;
+
+        color: white;
+        font-family: "Poppins" sans-serif;
+        font-family: "Poppins";
+        margin-top: 45px;
+    }
+}

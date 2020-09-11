@@ -1,0 +1,39 @@
+<div class="add-data-div">
+
+    <label for="Country">Country</label>
+    <select id="Country" name="Country" #country>
+        <option value="Libya">Libya</option>
+        <option value="Armenia">Armenia</option>
+        <option value="Turkey">Turkey</option>
+        <option value="Russia">Russia</option>
+    </select>
+
+
+
+
+    <label for="Rate">Rate</label>
+    <input type="text" name="Rate" id="Rate" value="%" #rate>
+
+    <button (click)="addRegion(country.value,rate.value)">ADD</button>
+
+</div>
+<div class="region-data-div">
+    <table class="tablet">
+        <thead>
+            <tr class="thead-">
+                <th scope="col" id="first">Country </th>
+                <th scope="col">Rate </th>
+                <th scope="col" id="last"> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let region of regionData">
+                <td>{{region.country}} </td>
+                <td>{{region.rate}}</td>
+                <td id="remove"><i class="fas fa-eraser" (click)="removeRegion(region)"></i></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>

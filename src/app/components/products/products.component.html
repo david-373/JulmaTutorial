@@ -1,0 +1,82 @@
+<div class="body">
+    <h4>Products</h4>
+    <div class="body-div">
+        <div class="drop-down-div">
+            <i class="fas fa-grip-lines"></i>
+            <div class="filter">
+                <p>Filter by</p>
+            </div>
+            <div class="product-type">
+                <p [ngClass]="{'color':productColor}" (click)="onSelectProduct()">
+                    Product Type<i class=" fas fa-caret-down" *ngIf="!productColor"></i>
+                    <i class="fas fa-caret-up" *ngIf="productColor"></i>
+                </p>
+                <div [hidden]="!productColor" class="type-div">
+                    <div class="pides">
+                        <p style="background-color: #c4f4ff; color: red;">Parmancy</p>
+                        <p style="border: 2px solid #c4f4ff;">Mall</p>
+                        <p style="background-color: #c4f4ff; color:red;">Clinic</p>
+                        <p style="border: 2px solid #c4f4ff;">Shop</p>
+                    </div>
+
+                    <button>Apply Now</button>
+                </div>
+            </div>
+            <div class="by-name">
+                <p [ngClass]="{'color':nameColor}" (click)="onSelectName()">
+                    By name<i class=" fas fa-caret-down" *ngIf="!nameColor"></i>
+                    <i class="fas fa-caret-up" *ngIf="nameColor"></i>
+
+                </p>
+                <div [hidden]="!nameColor" class="name-div">
+                    <div class="namee">
+                        <p>All product</p>
+                        <p>Product name name name</p>
+                        <p>Product name name name</p>
+                        <p>Product name name name</p>
+                        <p>Product name name name</p>
+                        <p>Product name name name</p>
+                        <p>Product name name name</p>
+                    </div>
+                </div>
+            </div>
+            <div class="refresh">
+                <i class="fas fa-redo-alt"></i>
+                <p>Refresh </p>
+            </div>
+
+            <button>Add new product</button>
+
+        </div>
+
+        <div class="card-div" *ngFor="let product of products">
+            <img src="{{product.img}}" class="card-img-top-z">
+            <div class="card-body-div">
+                <div class="name-div">
+                    <p>{{product.name}} </p>
+                    <i class="fas fa-heart" style="color: red;"></i>
+                </div>
+                <div class="price">
+                    <p>{{product.price}}/ Box</p>
+                    <p style="color: yellow; font-size: 20px ;">☆☆☆☆☆
+                        <i style="font-size: 11px; color:blue">({{product.reiting}})</i>
+                    </p>
+                </div>
+
+                <div class="stock">
+                    <p>Avilable stock </p>
+                    <i style="font-size: 13px; color:blue;">{{product.stock}}</i>
+                </div>
+                <div class="btns">
+                    <button style="color: blue;">Edit product</button>
+                    <button style="color: red;">Delete product</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

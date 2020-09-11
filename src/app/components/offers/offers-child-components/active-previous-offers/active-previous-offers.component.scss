@@ -1,0 +1,183 @@
+h4 {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.active-offers-div {
+    display: flex;
+    height: 250px;
+    width: 740px;
+    background-color: white;
+    border-radius: 6px;
+    margin-bottom: 20px;
+
+    .img {
+        width: 180px;
+        margin: 0;
+        background-color: #ebebeb;
+        margin: 15px 15px 15px 15px;
+        img {
+            width: 180px;
+            height: 220px;
+        }
+    }
+    .activ-offers-data {
+        padding: 15px;
+        padding-left: 0;
+        h5 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            margin-bottom: 5px;
+            color: #394143;
+        }
+        p {
+            color: #818e94;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+        .stars-div {
+            width: 100px;
+
+            color: #ffb901;
+            i {
+                margin: 2px;
+                font-size: 17px;
+            }
+        }
+        div {
+            display: flex;
+            height: 30px;
+            color: #818e94;
+            i {
+                margin-right: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+    .price-div {
+        width: 325px;
+        text-align: right;
+        padding-top: 15px;
+        h4 {
+            color: #828f95;
+            font-weight: 100;
+            font-family: "Poppins", sans-serif;
+            font-size: 22px;
+        }
+        p {
+            color: #99a3a8;
+            font-family: unset;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-top: 30px;
+        }
+        button {
+            border: none;
+            outline: none;
+            background: none;
+            color: #0c7abf;
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 60px;
+        }
+    }
+}
+.previous-offers-tablet-div {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px 1px cyan;
+    .tablet {
+        padding: 15px 15px 0px 15px;
+    }
+
+    .thead- {
+        th {
+            background-color: #c4f4ff;
+            color: black;
+            font-size: 17px;
+            border-top: none;
+            border-bottom: none;
+        }
+        #first {
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        #last {
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    }
+    tbody {
+        border: none;
+
+        tr {
+            .discount {
+                color: #ed212e;
+                font-weight: 600;
+            }
+            .bonus {
+                color: #0b79bf;
+                font-weight: 600;
+            }
+            td {
+                color: #859298;
+                margin: 0;
+                font-size: 15px;
+                padding: 16px;
+                border-top: none;
+                width: 165px;
+            }
+            .statics {
+                width: 220px;
+                padding: 12px 0px 12px 0px;
+                a {
+                    font-size: 12px;
+                    width: 55px;
+                    height: 25px;
+                    display: flex;
+                    border-radius: 20px;
+                    background-color: #f6f6f6;
+                    text-align: center;
+                    padding: 5px 5px 5px 5px;
+                    i {
+                        font-size: 13px;
+                        margin: 0 auto;
+                        margin-top: 2px;
+                    }
+                    p {
+                        font-size: 12px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .option {
+                width: 110px;
+                padding: 12px 0px 12px 0px;
+                a {
+                    font-size: 12px;
+                    font-weight: bold;
+                    width: 65px;
+                    height: 25px;
+                    display: flex;
+                    border-radius: 20px;
+                    background-color: #f3f1ff;
+                    text-align: center;
+                    padding: 5px 5px 5px 5px;
+                    i {
+                        font-size: 13px;
+                        margin: 0 auto;
+                        margin-top: 2px;
+                    }
+                    p {
+                        font-size: 12px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

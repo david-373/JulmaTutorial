@@ -1,0 +1,51 @@
+.company-card-div {
+    width: 630px;
+    height: 275px;
+    border-radius: 6px;
+    background-color: white;
+    margin: 25px 0px 0px 20px;
+    box-shadow: 2px 2px 3px 0px #e2e5e9;
+    .fa-edit {
+        float: right;
+        padding: 15px 15px 0px 0px;
+        font-size: 17px;
+        color: #818e94;
+    }
+    .company-card-data-div {
+        display: flex;
+        width: 600px;
+        padding-top: 20px;
+        margin-left: 30px;
+
+        .img {
+            height: 170px;
+            width: 170px;
+            border-radius: 50%;
+            background-color: #e6e6e6;
+        }
+        .company-data {
+            width: 400px;
+            height: 170px;
+            margin-left: 40px;
+            h3 {
+                color: #293134;
+                font-weight: 600;
+                font-size: 15px;
+                margin: 0;
+            }
+            p {
+                color: #8e9a9f;
+                font-size: 12px;
+                font-family: "Poppins", sans-serif;
+            }
+            div {
+                display: flex;
+                height: 25px;
+                i {
+                    margin-right: 15px;
+                    color: #818e94;
+                }
+            }
+        }
+    }
+}

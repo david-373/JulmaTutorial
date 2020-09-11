@@ -1,0 +1,29 @@
+.body {
+    height: 94%;
+    width: 96%;
+    margin: auto;
+    margin-top: 3%;
+
+    h4 {
+        color: #5c5cb9;
+        font-weight: 700;
+        font-size: 25px;
+    }
+    .tabs-div {
+        width: 70%;
+        ::ng-deep.mat-tab-group {
+            width: 1000px;
+        }
+    }
+    ::ng-deep .mat-tab-body-wrapper {
+        height: 100vh;
+    }
+    ::ng-deep .mat-tab-label .mat-tab-label-content {
+        font-size: 15px;
+        font-weight: 600;
+        color: #383839;
+    }
+    ::ng-deep .mat-tab-lable-active {
+        color: yellow;
+    }
+}

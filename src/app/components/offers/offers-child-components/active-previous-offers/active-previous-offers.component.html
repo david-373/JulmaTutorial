@@ -1,0 +1,118 @@
+<app-active-offers-detalis *ngIf="detalisActiv" [offerData]='DataForSingleOfferDetalis'></app-active-offers-detalis>
+
+<div *ngIf="!detalisActiv">
+
+    <div>
+
+        <h4 style="color: #262626;">Active offers</h4>
+        <div class="active-offers-div" *ngFor="let activeOffers of activeOffersData"
+            (click)="goToDetalis(this.activeOffers)">
+            <div class="img">
+                <img src="{{activeOffers.img}}" alt="">
+            </div>
+
+            <div class="activ-offers-data">
+                <h5>{{activeOffers.fullName}}</h5>
+                <p>{{activeOffers.city}}</p>
+                <div class="stars-div">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <p>{{activeOffers.reviews.star}} stars from {{activeOffers.reviews.review}} reviews</p>
+                </div>
+                <div>
+                    <i class="far fa-calendar"></i>
+                    <p>{{activeOffers.date | date:'mediumDate'}}</p>
+                </div>
+                <div>
+                    <i class="fas fa-heart"></i>
+                    <p>{{activeOffers.likes}}</p>
+                </div>
+                <div>
+                    <i class="fas fa-eye"></i>
+                    <p>{{activeOffers.views}} views</p>
+                </div>
+                <div>
+                    <i class="fas fa-calendar-check"></i>
+                    <p>{{activeOffers.order}} order</p>
+                </div>
+            </div>
+            <div class="price-div">
+                <h4 style="text-decoration: line-through;">
+                    {{activeOffers.buyers.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h4>
+                <h4 style="color: #ed1f2c; font-weight: 600;">
+                    {{activeOffers.buyers.beforPrice  | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h4>
+                <p>{{activeOffers.date | date:'mediumTime'}}</p>
+                <button>Single offer</button>
+            </div>
+        </div>
+
+    </div>
+    <div style="margin-top: 30px;margin-bottom: 30px;">
+        <h4 style="color: #ed1f2c;">Previous offers</h4>
+        <div class="previous-offers-tablet-div">
+            <div class="tablet">
+                <table class="table">
+                    <thead class="thead-light ">
+                        <tr class="thead-">
+                            <th scope="col" id="first">Item</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Offer type</th>
+                            <th scope="col">Offer status</th>
+                            <th scope="col" style="text-align: center;">Statics</th>
+                            <th scope="col" id="last" style="text-align: center;">Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let previusData of tableData">
+                            <td>{{previusData.item}}</td>
+                            <td>{{previusData.date | date:'mediumDate'}}</td>
+                            <td>{{previusData.offerType}}</td>
+                            <td
+                                [ngClass]="{'discount':this.previusData.OfferStatus == 'Discount','bonus':this.previusData.OfferStatus == 'Bonus'}">
+                                {{previusData.OfferStatus}}</td>
+                            <td class="statics">
+                                <div style="display: flex;justify-content: space-around;width: 220px;margin: 0 auto;">
+                                    <a>
+                                        <i class="far fa-calendar"></i>
+                                        <p>{{previusData.Statics.order}}</p>
+                                    </a>
+                                    <a style="width: 65px;">
+                                        <i class="fas fa-eye"></i>
+                                        <p>{{previusData.Statics.views}}</p>
+                                    </a>
+                                    <a>
+                                        <i class="fas fa-heart"></i>
+                                        <p>{{previusData.Statics.likes}}</p>
+                                    </a>
+                                </div>
+
+                            </td>
+                            <td class="option">
+                                <div style="display: flex;justify-content: space-around;">
+                                    <a style="color: #167fc2;">
+                                        <i class="far fa-folder-open"></i>
+                                        <p>Open</p>
+                                    </a>
+                                    <a style="color: #ed2330;">
+                                        <i class="far fa-trash-alt"></i>
+                                        <p>Delete</p>
+                                    </a>
+                                </div>
+
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="paymenst-card-div">
+    <div class="payment-card">
+        <div>
+            <i class="fas fa-check-circle" *ngIf="cardCheckedPyapal"></i>
+
+        </div>
+
+        <img src="../../../../../assets/images/unnamed.png" alt="">
+        <button (click)="checkCardPaypal()" *ngIf="!cardCheckedPyapal" style="color: #3b92cc">Connect</button>
+        <button (click)=" checkCardPaypal()" *ngIf="cardCheckedPyapal" style="color:#ef3843">Disconnect</button>
+    </div>
+    <div class="payment-card">
+        <div>
+            <i class=" fas fa-check-circle" *ngIf="cardCheckedVisa"></i>
+        </div>
+
+        <img src="../../../../../assets/images//images.png" alt="" style="height: 45px;margin: 10px 29px 20px 29px;">
+        <button (click)="checkCardVisa()" *ngIf="!cardCheckedVisa" style="color: #3b92cc;">Connect</button>
+        <button (click)="checkCardVisa()" *ngIf="cardCheckedVisa" style="color:#ef3843;">Disconnect</button>
+    </div>
+    <div class="payment-card">
+        <div>
+            <i class=" fas fa-check-circle" *ngIf="cardCheckedMaster"></i>
+        </div>
+
+
+        <img src="../../../../../assets/images/Без названия.jpg" alt="" style="width: 100px;margin: 0px 18px 0px 18px;">
+        <button (click)="checkCardMaster()" *ngIf="!cardCheckedMaster" style="color: #3b92cc;">Connect</button>
+        <button (click)="checkCardMaster()" *ngIf="cardCheckedMaster" style="color: #ef3843;">Disconnect</button>
+    </div>
+</div>

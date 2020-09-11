@@ -1,0 +1,98 @@
+<div class="body">
+    <h4>Wallet</h4>
+    <div class="wallet-date-div">
+        <div class="wallet-date">
+            <div class="inp-date">
+                <i class="far fa-clock"></i>
+                <p>Date</p>
+            </div>
+            <div class="data-picker-div">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate placeholder="Start date">
+                        <input matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker">
+                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+            </div>
+
+            <div class="order-status">
+                <div style="display: flex; justify-content: space-between;" (click)="onSelectStatus()">
+                    <p>
+                        Order satus
+
+                    </p><i class="fas fa-chevron-down" *ngIf="!selectStatus" style="font-size: 12px;"></i>
+                    <i class="fas fa-chevron-up" *ngIf="selectStatus" style="font-size: 12px;"></i>
+                </div>
+
+                <div [hidden]="!selectStatus" class="status-div">
+                    <div class="statuss">
+                        <p style="background-color: #c4f4ff; color: red;">Completed</p>
+                        <p style="border: 2px solid #c4f4ff;">Pending</p>
+                        <p style="background-color: #c4f4ff; color:red;">Rejected</p><br>
+                        <p style="border: 2px solid #c4f4ff; margin-right: 187px; margin-top: 0;">On hold</p>
+
+                    </div>
+                    <button>Apply Now</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="print-btn">
+            <div>
+                <i class="fas fa-print"></i> <button> Print</button>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="electronic-payment-div">
+        <div class="tablet">
+            <table class="table">
+                <thead class="thead-light ">
+                    <tr class="thead-">
+                        <th scope="col" id="first">No.</th>
+                        <th scope="col">Date-time</th>
+                        <th scope="col">Reference ID</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Debit</th>
+                        <th scope="col">Credit</th>
+                        <th id="last">Balance</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let deal of deales">
+
+                    <tr>
+                        <td>0{{deal.No}}</td>
+                        <td>{{deal.DateTime | date:'dd MMMM yyyy - hh:mm'}}</td>
+                        <td>{{deal.ReferenceID }}</td>
+                        <td>{{deal.Description}}</td>
+                        <td class="debit">{{deal.Debit}} <i class="fas fa-minus" *ngIf="this.deal.Debit ==''"></i>
+                        </td>
+                        <td class="credit">{{deal.Credit}} <i class="fas fa-minus" *ngIf="this.deal.Credit ==''"></i>
+                        </td>
+
+
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+        <div class="electronics-payment-data-div">
+            <div style="display: flex;width: 165px;
+            justify-content: space-between;">
+                <p>{{debitValue | currency:'USD':'code':'1.0-0'}}</p>
+                <p style="color: #f3737b;">{{creditValue | currency:'USD':'code':'1.0-0'}}</p>
+            </div>
+
+            <p>{{totalDebitsWhitCredits | currency:'USD':'code':'1.0-0'}}</p>
+        </div>
+    </div>
+
+</div>

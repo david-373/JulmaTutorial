@@ -1,0 +1,34 @@
+<h2>Currency Exchange</h2>
+<div class="exchange-div">
+    <div>
+        <select #fromValuta>
+            <option value="USD">USD</option>
+            <option value="CAD">CAD</option>
+            <option value="RUB">RUB</option>
+
+        </select>
+
+        <input type="text" #from>
+    </div>
+
+
+    <div class="exchange-button" (click)="currencyOutcome(from.value,fromValuta.value,to.value,toValuta.value)">
+        <i class="fas fa-random"></i>
+
+    </div>
+    <div>
+        <select #toValuta>
+            <option value="USD">USD</option>
+            <option value="CAD">CAD</option>
+            <option value="RUB">RUB</option>
+        </select>
+
+        <input type="text" value="{{itog}}" #to>
+    </div>
+
+
+</div>
+
+
+<div class="bc-img">
+</div>

@@ -1,0 +1,170 @@
+<div class="body">
+    <h4>Customers</h4>
+    <div class="drop-down-div">
+        <i class="fas fa-grip-lines"></i>
+        <div class="filter">
+            <p>Filter by</p>
+        </div>
+        <div class="customer-type">
+            <p [ngClass]="{'color':customerActiv}" (click)="onSelectCustomer()">
+                Customer type<i class=" fas fa-caret-down" *ngIf="!customerActiv"></i>
+                <i class="fas fa-caret-up" *ngIf="customerActiv"></i>
+            </p>
+            <div [hidden]="!customerActiv" class="customer-div">
+                <div class="pides">
+                    <p style="background-color: #c4f4ff; color: red;">Retailers</p>
+                    <p style="border: 2px solid #c4f4ff;">Wholeselers</p>
+                    <p style="background-color: #c4f4ff; color:red;">Buyers</p>
+                </div>
+                <button>Apply Now</button>
+            </div>
+        </div>
+        <div class="location" (click)="onSelectLocation()">
+            <p [ngClass]="{'color':locationActiv}">
+                Location<i class=" fas fa-caret-down" *ngIf="!locationActiv"></i>
+                <i class="fas fa-caret-up" *ngIf="locationActiv"></i>
+
+            </p>
+            <div [hidden]="!locationActiv" class="location-div">
+                <div class="loc">
+                    <p>All location</p>
+                    <p>Location name name </p>
+                    <p>Location name name </p>
+                    <p>Location name name </p>
+                    <p>Location name name </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="activity">
+            <p [ngClass]="{'color':activityActiv}" (click)="onSelectActivity()">
+                Activity <i class=" fas fa-caret-down" *ngIf="!activityActiv"></i>
+                <i class="fas fa-caret-up" *ngIf="activityActiv"></i>
+            </p>
+            <div [hidden]="!activityActiv" class="activity-div">
+                <div class="activs">
+                    <p style="background-color: #c4f4ff; color: red;">Parmancy</p>
+                    <p style="border: 2px solid #c4f4ff;">Mall</p>
+                    <p style="background-color: #c4f4ff; color:red;">Clinic</p>
+                    <p style="border: 2px solid #c4f4ff;">Shop</p>
+                </div>
+
+                <button>Apply Now</button>
+            </div>
+        </div>
+        <div class="gender">
+            <p [ngClass]="{'color':genderActiv}" (click)="onSelectGender()">
+                Gender <i class="fas fa-caret-down" *ngIf="!genderActiv"></i>
+                <i class="fas fa-caret-up" *ngIf="genderActiv"></i>
+            </p>
+            <div [hidden]="!genderActiv" class="gender-div">
+                <div class="genders">
+                    <p style="background-color: #c4f4ff; color: red;">Male</p>
+                    <p style="border: 2px solid #c4f4ff;">Female</p>
+                </div>
+                <button>Apply Now</button>
+            </div>
+        </div>
+        <div class="refresh">
+            <i class="fas fa-redo-alt"></i>
+            <p>Refresh </p>
+        </div>
+        <button class="customer-button">Add new customer</button>
+    </div>
+    <div class="cards-div">
+        <div class="card">
+            <div class="icon-div">
+                <i class="fas fa-users"></i>
+
+            </div>
+            <p style="font-size: 17px;font-weight: 400;">All customer</p>
+            <p style="color: #6c757d; font-weight: 500; font-size: 18px;">1.189</p>
+        </div>
+        <div class="card">
+            <div class="icon-div">
+                <i class="fas fa-check" style="color: rgb(28, 247, 28);"></i>
+
+            </div>
+            <p style="font-size: 17px;font-weight: 400;">Golden customer</p>
+            <p style="color: #6c757d; font-weight: 500; font-size: 18px;">178</p>
+        </div>
+        <div class="card">
+            <div class="icon-div">
+                <i class="fas fa-dollar-sign" style="color:#5c5cb9"></i>
+
+            </div>
+            <p style="font-size: 17px;font-weight: 400;">Most purchased</p>
+            <p style="color: #6c757d; font-weight: 500; font-size: 18px;">89</p>
+        </div>
+        <div class="card">
+            <div class="icon-div">
+                <i class="fas fa-envelope-open-text" style="color: red;"></i>
+
+            </div>
+            <p style="font-size: 17px;font-weight: 400;">Loyalty customer</p>
+            <p style="color: #6c757d; font-weight: 500; font-size: 18px;">10</p>
+        </div>
+        <div class="card">
+            <div class="icon-div">
+                <i class="fas fa-user-friends" style="color: #ababab;"></i>
+
+            </div>
+            <p style="font-size: 17px;font-weight: 400;">Active customer</p>
+            <p style="color: #6c757d; font-weight: 500; font-size: 18px;">912</p>
+        </div>
+    </div>
+    <hr>
+    <div class="checkbox-div">
+        <div style="margin-top: 10px;">
+            <input type="checkbox">
+            <p>Select all</p>
+        </div>
+        <div style="margin-top: 10px;">
+            <input type="checkbox">
+            <p>Select</p>
+        </div>
+        <div>
+            <div class="customer-dashboard" (click)="onCustomSelect()">
+                <p>Golden customer</p>
+                <i class="fas fa-caret-down" *ngIf="!customActiv"></i>
+                <i class="fas fa-caret-up" *ngIf="customActiv"></i>
+            </div>
+            <div class="customer-drop-down" [hidden]="!customActiv">
+                <div>
+                    <input type="checkbox">
+                    <p>Golden customer</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Most purchased</p>
+
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Loyalty customer</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Active customer</p>
+                </div>
+                <button>Apply Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="user-div">
+          <div class=" user-card" *ngFor="let user of users">
+        <input type="checkbox">
+        <img src="{{user.img}}">
+        <div>
+            <h5>{{user.fullName}}</h5>
+            <p>{{user.by}}</p>
+            <p style="color: #19c9c9;">{{user.country}}</p>
+            <p class="i">☆☆☆☆☆</p>
+            <p>{{user.usage}}</p>
+            <button>Detalis</button>
+        </div>
+    </div>
+    </div>
+  
+   
+</div>

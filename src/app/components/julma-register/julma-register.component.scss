@@ -1,0 +1,156 @@
+:host {
+    display: flex;
+}
+.bc-img {
+    width: 50%;
+    background-image: url("../../../assets/images/flat-style-mobile-online-store-e-commerce-icons-infographics-background-business-concept-online-shopping-vector-illustration-delivery-service_3248-3528.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.regiser-form-div {
+    width: 50%;
+    .logo-img {
+        width: 50px;
+        height: 50px;
+        background-image: url("../../../assets/images/formlogo.png");
+        background-size: cover;
+        float: right;
+        margin-top: 20px;
+        margin-right: 40px;
+    }
+    .registration-form {
+        width: 92%;
+        margin: 0 auto;
+        margin-top: 70px;
+        margin-right: 20px;
+        h1 {
+            font-weight: 600;
+            font-size: 25px;
+            color: rgb(38 38 38);
+            margin-left: 30px;
+        }
+        .all-form-div {
+            width: 100%;
+
+            .btns-div {
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                margin-left: 30px;
+                button {
+                    outline: none;
+                    border: none;
+                    width: 46%;
+                    height: 40px;
+                    border-radius: 10px;
+                    background: none;
+                    font-weight: 600;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .customer-form {
+                display: block;
+                width: 96%;
+                margin: 0 auto;
+                margin-top: 30px;
+                div {
+                    display: inline-block;
+                    justify-content: space-between;
+                    width: 50%;
+                    margin-bottom: 20px;
+                    p {
+                        margin: 0;
+                        margin-left: 20px;
+                        font-weight: 600;
+                        font-size: 13px;
+                    }
+                    input {
+                        border: none;
+                        outline: none;
+                        width: 85%;
+                        height: 40px;
+                        border-radius: 6px;
+                        margin-left: 20px;
+                        background-color: #f1f1f1;
+                    }
+                    input[type="text"] {
+                        padding-left: 10px;
+                    }
+                }
+                .select {
+                    width: 85%;
+                    height: 40px;
+                    border-radius: 6px;
+                    margin-left: 20px;
+                    background-color: #f1f1f1;
+                }
+                select {
+                    width: 96%;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: #818e94;
+                    padding: 11px 0px 11px 10px;
+                }
+
+                .description-div {
+                    width: 96%;
+                    input {
+                        width: 96%;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+        .accept-div {
+            display: flex;
+            margin-left: 40px;
+            margin-bottom: 40px;
+            justify-content: space-between;
+            width: 280px;
+            p {
+                margin: 0;
+                a {
+                    text-decoration: none;
+                }
+            }
+            input {
+                margin-top: 3px;
+            }
+        }
+        .regis-btn {
+            width: 400px;
+            margin: 0 auto;
+            button {
+                outline: none;
+                border: none;
+                width: 400px;
+                height: 35px;
+                margin: 0 auto;
+                border-radius: 10px;
+                background-color: #0978be;
+                color: white;
+            }
+        }
+        .sing-in {
+            width: 275px;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 30px;
+
+            p {
+                letter-spacing: 0.5px;
+                font-weight: 600;
+                font-size: 14px;
+                a {
+                    color: blueviolet;
+                    margin-left: 4px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

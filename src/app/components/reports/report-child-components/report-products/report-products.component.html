@@ -1,0 +1,48 @@
+<div class="body">
+    <h3>Most Selling</h3>
+
+    <div class="drops">
+        <div class="monthly-container">
+            <div class="monthly-drop-down">
+                <div (click)="onSelectMonthly()">
+                    <p>Monthly</p><i class="fas fa-caret-down" *ngIf="!monthlySelected"></i>
+                    <i class=" fas fa-caret-up" *ngIf="monthlySelected"></i>
+                </div>
+            </div>
+            <div [hidden]="!monthlySelected" class="monthy-drop-down-div">
+                <p>Last 30 minutes</p>
+                <p>Last 6 hours</p>
+                <p>Last 12 hours</p>
+                <p>Last week</p>
+                <p>Last month</p>
+                <p>Last 6 months</p>
+                <p>Last year</p>
+                <p>Selct date</p>
+            </div>
+        </div>
+        <div class="date-picker-div">
+            <p style="font-weight: 700;
+                margin: 7px 7px 0px 20px;">From</p>
+            <mat-form-field>
+                <input matInput [matDatepicker]="myDatePicker">
+                <mat-datepicker-toggle [for]="myDatePicker" matSuffix>
+                    <mat-icon matDatepickerToggleIcon>arrow_drop_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #myDatePicker></mat-datepicker>
+            </mat-form-field>
+            <p style="font-weight: 700;
+               margin: 7px 7px 0px 25px;">To</p>
+            <mat-form-field>
+                <input matInput [matDatepicker]="myDatePicker1">
+                <mat-datepicker-toggle [for]="myDatePicker1" matSuffix>
+                    <mat-icon matDatepickerToggleIcon>arrow_drop_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #myDatePicker1></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div id="divBarChart">
+        <canvas id="barChart" height="320px" width="640px"></canvas>
+    </div>
+</div>

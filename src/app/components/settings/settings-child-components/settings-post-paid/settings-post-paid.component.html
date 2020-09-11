@@ -1,0 +1,111 @@
+<div class="post-paid-customer-input-div">
+    <div class="input-div">
+        <div>
+            <h6>Vendro name:</h6>
+            <p>Al Abar store for medical</p>
+
+        </div>
+        <div>
+            <h6>Post paid limit:</h6>
+            <p>$5,000</p>
+
+        </div>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <button>Add customer</button>
+</div>
+<button>White list</button>
+<div class="table-div">
+
+    <div class="tablet">
+        <table class="table">
+            <thead class="thead-light ">
+                <tr class="thead-">
+                    <th scope="col" id="first">#</th>
+                    <th scope="col">customer name</th>
+                    <th scope="col">Days</th>
+                    <th scope="col">Order No.</th>
+                    <th scope="col" style="text-align: center;">Order limit</th>
+                    <th scope="col" id="last" style="text-align: center;">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let listData of whiteListData">
+                    <td>#{{listData.num}}</td>
+                    <td>{{listData.customerName}}</td>
+                    <td>{{listData.days}}</td>
+                    <td>#{{listData.orderNo}}</td>
+                    <td>{{listData.orderLimit | currency:'USD':'symbol-narrow':'1.0-0'}}</td>
+                    <td class="option">
+                        <div style="display: flex;justify-content: space-around;">
+                            <a style="color: #167fc2;">
+
+                                <p>Send notification</p>
+                            </a>
+                            <a style="color: #167fc2;">
+
+                                <p>Show announcment</p>
+                            </a>
+                            <a style="color: #ed2330; width: 65px;">
+
+                                <p>Block</p>
+                            </a>
+                        </div>
+
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<button style="background-color: #555557; color: white;margin-top: 30px;">Black list</button>
+<div class="table-div">
+
+    <div class="tablet">
+        <table class="table">
+            <thead class="thead-light ">
+                <tr class="thead-">
+                    <th scope="col" id="first">#</th>
+                    <th scope="col">customer name</th>
+                    <th scope="col">Days</th>
+                    <th scope="col">Order No.</th>
+                    <th scope="col" style="text-align: center;">Order limit</th>
+                    <th scope="col" id="last" style="text-align: center;">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let listData of blackListData">
+                    <td>#{{listData.num}}</td>
+                    <td>{{listData.customerName}}</td>
+                    <td>{{listData.days}}</td>
+                    <td>#{{listData.orderNo}}</td>
+                    <td>{{listData.orderLimit | currency:'USD':'symbol-narrow':'1.0-0'}}</td>
+                    <td class="option">
+                        <div style="display: flex;justify-content: space-around;">
+                            <a style="color: #167fc2;">
+
+                                <p>Send notification</p>
+                            </a>
+                            <a style="color: #167fc2;">
+
+                                <p>Show announcment</p>
+                            </a>
+                            <a style="color: #ed2330; width: 65px;">
+
+                                <p>Unblock</p>
+                            </a>
+                        </div>
+
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

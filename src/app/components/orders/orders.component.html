@@ -1,0 +1,82 @@
+<div class="body">
+    <h4>Orders</h4>
+    <div class="drop-down-div">
+        <i class="fas fa-grip-lines"></i>
+        <div class="filter">
+            <p>Filter by</p>
+        </div>
+        <div class="date">
+            <p (click)="onSelect()" [ngClass]="{'color':color}">
+                Date<i class=" fas fa-caret-down" *ngIf="!color"></i>
+                <i class="fas fa-caret-up" *ngIf="color"></i>
+            </p>
+            <mat-calendar name="appointment_date" [hidden]="!selectedDate">
+            </mat-calendar>
+        </div>
+        <div class="order-type">
+            <p (click)="onSelectType()" [ngClass]="{'color':colorType}">
+                Order Type<i class=" fas fa-caret-down" *ngIf="!colorType"></i>
+                <i class="fas fa-caret-up" *ngIf="colorType"></i>
+            </p>
+            <div [hidden]="!selectedType" class="type-div">
+                <div class="pides">
+                    <p style="background-color: #c4f4ff; color: red;">Paid</p>
+                    <p style="border: 2px solid #c4f4ff;">Un paid</p>
+                    <p style="background-color: #c4f4ff; color:red;">Post paid</p>
+                </div>
+
+                <button>Apply Now</button>
+            </div>
+        </div>
+        <div class="order-status">
+            <p (click)="onSelectStatus()" [ngClass]="{'color':colorStatus}">
+                Order satus<i class=" fas fa-caret-down" *ngIf="!colorStatus"></i>
+                <i class="fas fa-caret-up" *ngIf="colorStatus"></i>
+
+            </p>
+            <div [hidden]="!selectedStatus" class="status-div">
+                <div class="statuss">
+                    <p style="background-color: #c4f4ff; color: red;">Completed</p>
+                    <p style="border: 2px solid #c4f4ff;">Pending</p>
+                    <p style="background-color: #c4f4ff; color:red;">Rejected</p><br>
+                    <p style="border: 2px solid #c4f4ff; margin-right: 187px; margin-top: 0;">On hold</p>
+
+                </div>
+                <button>Apply Now</button>
+            </div>
+        </div>
+        <div class="refresh">
+            <i class="fas fa-redo-alt"></i>
+            <p>Refresh </p>
+        </div>
+    </div>
+
+
+
+    <div class="tablet">
+        <table class="table">
+            <thead class="thead-light ">
+                <tr class="thead-">
+                    <th scope="col" id="first">Order ID</th>
+                    <th scope="col">Date-Time</th>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Country-Region</th>
+                    <th scope="col">Payment</th>
+                    <th scope="col" id="last">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of Orders">
+                    <td>0000{{order.orderId}}</td>
+                    <td>{{order.dateTime | date:'dd MMMM yyyy - hh:mm' }}</td>
+                    <td>0000{{order.customerID}}</td>
+                    <td>{{order.countryRegion}}</td>
+                    <td>{{order.Payment}}</td>
+                    <td class="status"><a>{{order.Satus}}</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

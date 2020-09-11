@@ -1,0 +1,165 @@
+.body {
+    display: block;
+    margin-top: 30px;
+    width: 730px;
+    .customers-div {
+        display: inline-block;
+        width: 350px;
+        height: 270px;
+        border-radius: 10px;
+        background-color: white;
+        margin-right: 30px;
+        h3 {
+            width: 330px;
+            height: 30px;
+            background-color: aqua;
+            margin: 0 auto;
+            border-radius: 10px;
+            padding-left: 5px;
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .customers-data-div {
+            width: 320px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 7px;
+            div {
+                display: flex;
+            }
+            p {
+                color: #6060d6;
+                font-weight: 600;
+                font-size: 15px;
+            }
+        }
+        #customersDoughnutChart {
+            height: 130px;
+            width: 130px;
+            margin: 0 auto;
+        }
+        .chart-points {
+            justify-content: space-between;
+            display: flex;
+            width: 235px;
+            margin-left: 20px;
+            margin-top: 25px;
+            div {
+                display: flex;
+                i {
+                    font-size: 10px;
+                    margin-top: 5px;
+                    margin-right: 5px;
+                }
+                p {
+                    color: #838e94;
+                }
+            }
+        }
+    }
+    .most-paying-div {
+        display: inline-block;
+        width: 350px;
+        height: 270px;
+        border-radius: 10px;
+        background-color: white;
+        h3 {
+            width: 330px;
+            height: 30px;
+            background-color: aqua;
+            margin: 0 auto;
+            border-radius: 10px;
+            padding-left: 5px;
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        #payingDoughnutChart {
+            height: 130px;
+            width: 130px;
+            margin: 0 auto;
+            margin-top: 38px;
+        }
+        .parcent-p {
+            float: right;
+            margin-right: 20px;
+            margin-top: 7px;
+            color: blue;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .most-paying-points {
+            margin-left: 20px;
+            margin-top: 25px;
+            div {
+                display: flex;
+                i {
+                    font-size: 10px;
+                    margin-top: 5px;
+                    margin-right: 5px;
+                }
+                p {
+                    color: rgb(255 108 64);
+                }
+            }
+        }
+    }
+    .customers-statification-div {
+        display: inline-block;
+        width: 350px;
+        border-radius: 10px;
+        background-color: white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        h3 {
+            width: 330px;
+            height: 30px;
+            background-color: aqua;
+            margin: 0 auto;
+            border-radius: 10px;
+            padding-left: 5px;
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        #statificationDoughnutChart {
+            height: 130px;
+            width: 130px;
+            margin: 0 auto;
+        }
+        .statification-p {
+            margin-left: 20px;
+            margin-top: 7px;
+            color: blue;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .statification-points {
+            margin-left: 20px;
+            display: block;
+            width: 310px;
+            margin: 0 auto;
+            margin-top: 15px;
+            div {
+                display: inline-block;
+                width: 130px;
+
+                div {
+                    display: flex;
+                    height: 24px;
+                    i {
+                        font-size: 8px;
+                        margin-top: 5px;
+                        margin-right: 5px;
+                    }
+                    p {
+                        font-size: 13px;
+                        color: cadetblue;
+                    }
+                }
+            }
+        }
+    }
+}

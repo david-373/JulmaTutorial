@@ -1,0 +1,236 @@
+.body {
+    height: 94%;
+    width: 96%;
+    margin: auto;
+    margin-top: 3%;
+
+    h4 {
+        color: #5c5cb9;
+        font-weight: 700;
+        font-size: 25px;
+    }
+    .reviews-div {
+        width: 590px;
+        height: 280px;
+        background-color: white;
+        border-radius: 10px;
+
+        div {
+            display: flex;
+            width: 560px;
+            margin-top: 55px;
+
+            .star-div {
+                height: 220px;
+                width: 200px;
+
+                .star-div- {
+                    display: block;
+                    width: 150px;
+                    height: 200px;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    text-align: center;
+                    padding-left: 10px;
+                    .big-star {
+                        height: 45px;
+                        width: 45px;
+                        font-size: 19px;
+                        border-radius: 50%;
+                        background-color: #fff8e5;
+                        padding: 12px 12px 12px 12px;
+                        color: #ffb901;
+                    }
+
+                    .stars {
+                        width: 130px;
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: 20px;
+                        color: #ffb901;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .progress-div {
+                height: 220px;
+                width: 300px;
+                display: block;
+                margin-left: 60px;
+                .Stars {
+                    display: inline-flex;
+                    justify-content: space-around;
+                    width: 130px;
+                    color: #ffb901;
+                    font-size: 15px;
+                    margin: 25px 0px 20px 40px;
+                }
+                .progress {
+                    display: inline-block;
+                    margin: 0;
+                    margin-bottom: 12px;
+                    width: 300px;
+                    background: none;
+
+                    ::ng-deep .mat-progress-bar {
+                        width: 230px;
+                        border-radius: 10px;
+                        height: 10px;
+                    }
+                    ::ng-deep .mat-progress-bar-buffer {
+                        background-color: #ebebeb;
+                    }
+                    ::ng-deep .mat-progress-bar-fill::after {
+                        background-color: #0978be;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
+                    .mat-progress-bar-data {
+                        margin: -10px 0px 0px 0px;
+                        margin-left: 240px;
+                    }
+                }
+            }
+        }
+    }
+    .drop-down-div {
+        width: 400px;
+        height: 40px;
+        border: 0.5px solid #cbcbce;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 45px;
+        border-radius: 10px;
+        background-color: #fff;
+        i {
+            padding: 10px 0px 0px 15px;
+        }
+        div {
+            border-left: 0.5px solid #fafafa;
+        }
+        p {
+            margin-left: 10px;
+        }
+        .filter {
+            p {
+                margin: 8px 0px 0px 6px;
+                color: #6c757d;
+            }
+        }
+    }
+    .date {
+        position: relative;
+
+        color: #6c757d;
+        cursor: pointer;
+        .mat-calendar {
+            width: 200px;
+            background-color: hsl(0deg 0% 100%);
+            position: absolute;
+            border-radius: 6px;
+            box-shadow: 2px 1px 14px 4px #ffe1e1;
+        }
+    }
+    .refresh {
+        cursor: pointer;
+        text-align: center;
+        display: flex;
+        width: 100px;
+        color: red;
+        font-weight: 400;
+        p {
+            margin: 7px 0px 0px 5px;
+        }
+    }
+    .color {
+        color: blue;
+    }
+    .all-product {
+        width: 101px;
+        color: #6c757d;
+        cursor: pointer;
+        z-index: 3;
+        .products-div {
+            background-color: white;
+            box-shadow: 0px 2px 4px 0px #ffe1e1;
+            border-radius: 6px;
+            width: 200px;
+            .product {
+                border: none;
+                padding-left: 5px;
+                p {
+                    margin: 0;
+                    padding: 6px 0px 4px 0px;
+                    width: 165px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .user-cards-div {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: block;
+        .user-card {
+            display: inline-block;
+            height: 225px;
+            width: 305px;
+            background-color: white;
+            border-radius: 5px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            .user-data-div {
+                display: flex;
+                width: 275px;
+                margin: 0 auto;
+                margin-top: 20px;
+                img {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                }
+                h6 {
+                    font-size: 13px;
+                    margin: 8px 0px 0px 13px;
+                    font-family: "Poppins", sans-serif;
+                    color: #8a979c;
+                }
+                p {
+                    font-size: 12px;
+                    margin: 8px 0px 0px 42px;
+                    font-family: "Poppins", sans-serif;
+                    color: #8a979c;
+                }
+            }
+            .card-stars {
+                color: #ffb901;
+                font-size: 16px;
+                width: 141px;
+                margin: 0 auto;
+                letter-spacing: 7px;
+                margin-top: 15px;
+            }
+            .card-text {
+                width: 250px;
+                margin: 0 auto;
+                margin-top: 30px;
+                p {
+                    color: #8a979c;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 12px;
+                }
+            }
+            button {
+                outline: none;
+                border: none;
+                color: #157fc1;
+                background: none;
+                font-size: 15px;
+                font-weight: 600;
+                font-family: "Poppins", sans-serif;
+                float: right;
+                margin: 4px 30px 0px 0px;
+            }
+        }
+    }
+}

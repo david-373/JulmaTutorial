@@ -1,0 +1,16 @@
+<div class="body">
+    <h4>Notification</h4>
+
+    <div class="notafication-div">
+        <h6>Today</h6>
+        <div class="notafication-body-div">
+            <div *ngFor="let notafication of notafications; let ind = index">
+                <i class="fas fa-bell"></i>
+                <p class="name-p">{{notafication.fullName}}</p>
+                <p class="text-p">{{notafication.message}}</p>
+                <i class="fas fa-trash-alt" (click)="removeNots(notafication)"></i>
+            </div>
+        </div>
+    </div>
+
+</div>

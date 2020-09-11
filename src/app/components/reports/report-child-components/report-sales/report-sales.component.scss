@@ -1,0 +1,79 @@
+.body {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    .sales-div {
+        background-color: white;
+        height: 240px;
+        width: 350px;
+        border-radius: 10px;
+        h3 {
+            padding: 15px 0px 0px 10px;
+            font-weight: 600;
+            font-size: 17px;
+        }
+        ul {
+            padding: 0px 0px 0px 10px;
+            li {
+                list-style-type: none;
+            }
+            li:last-child {
+                p {
+                    color: red;
+                    font-weight: 600;
+                }
+                i {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .sales-date-table {
+            display: flex;
+            width: 280px;
+            margin-top: 15px;
+            margin-left: 5px;
+            p {
+                color: #aaaabe;
+                margin-right: 70px;
+            }
+        }
+    }
+    .orders-div {
+        background-color: white;
+        height: 240px;
+        width: 400px;
+        border-radius: 10px;
+        h3 {
+            padding: 15px 0px 0px 10px;
+            font-weight: 600;
+            font-size: 17px;
+            margin: 0;
+        }
+        .orders-chart {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 25px;
+            #divDoughChart {
+                height: 120px;
+                width: 120px;
+            }
+            .date-div {
+                width: 130px;
+                .date {
+                    display: flex;
+                    width: 130px;
+                    margin-bottom: 20px;
+                    .fa-circle {
+                        font-size: 10px;
+                        margin-right: 5px;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

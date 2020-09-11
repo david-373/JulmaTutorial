@@ -1,0 +1,299 @@
+<div class="body">
+    <h4>Dashboard</h4>
+    <div style="display: flex; margin-top: 30px;">
+        <div class="card-progress-div">
+            <div class="div1">
+                <p>Active customers</p>
+                <div class="i">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+            <p class="num">18,689</p>
+            <div class="div2">
+                <div>
+                    <span class="material-icons">trending_up</span>
+                    <p>8.5%</p>
+                </div>
+                <p>Up from yesterday</p>
+            </div>
+        </div>
+        <div class="card-progress-div">
+            <div class="div1">
+                <p>Total orders</p>
+                <div class="i">
+                    <i class="fas fa-box-open" style="color:#73c27d"></i>
+                </div>
+            </div>
+            <p class="num">18,689</p>
+            <div class="div2">
+                <div>
+                    <span class="material-icons">trending_up</span>
+                    <p>8.5%</p>
+                </div>
+                <p>Up from yesterday</p>
+            </div>
+        </div>
+        <div class="card-progress-div">
+            <div class="div1">
+                <p>Total sales</p>
+                <div class="i">
+                    <i class="fas fa-chart-line" style="color: red; font-size: 17px;"></i>
+                </div>
+            </div>
+            <p class="num">18,689</p>
+            <div class="div2">
+                <div>
+                    <span class="material-icons">trending_up</span>
+                    <p>8.5%</p>
+                </div>
+                <p>Up from yesterday</p>
+            </div>
+        </div>
+        <div class="card-progress-div">
+            <div class="div1">
+                <p>Total pending</p>
+                <div class="i">
+                    <i class="far fa-clock" style="color:#73c27d;font-size: 17px;"></i>
+                </div>
+            </div>
+            <p class="num">18,689</p>
+            <div class="div2">
+                <div>
+                    <span class="material-icons">trending_up</span>
+                    <p>8.5%</p>
+                </div>
+                <p>Up from yesterday</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sales-div">
+        <div class="sales-header">
+            <h6>Sales Detalis</h6>
+            <div class="drops">
+                <div class="monthly-container">
+                    <div class="monthly-drop-down">
+                        <div (click)="onSelectMonthly()">
+                            <p>Monthly</p><i class="fas fa-caret-down" *ngIf="!monthlySelected"></i>
+                            <i class=" fas fa-caret-up" *ngIf="monthlySelected"></i>
+                        </div>
+                    </div>
+                    <div [hidden]="!monthlySelected" class="monthy-drop-down-div">
+                        <p>Last 30 minutes</p>
+                        <p>Last 6 hours</p>
+                        <p>Last 12 hours</p>
+                        <p>Last week</p>
+                        <p>Last month</p>
+                        <p>Last 6 months</p>
+                        <p>Last year</p>
+                        <p>Selct date</p>
+                    </div>
+                </div>
+                <div class="date-picker-div">
+                    <p style="font-weight: 700;
+                    margin: 7px 7px 0px 0px;">From</p>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="myDatePicker">
+                        <mat-datepicker-toggle [for]="myDatePicker" matSuffix>
+                            <mat-icon matDatepickerToggleIcon>arrow_drop_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #myDatePicker></mat-datepicker>
+                    </mat-form-field>
+                    <p style="font-weight: 700;
+                   margin: 7px 7px 0px 25px;">To</p>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="myDatePicker1">
+                        <mat-datepicker-toggle [for]="myDatePicker1" matSuffix>
+                            <mat-icon matDatepickerToggleIcon>arrow_drop_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #myDatePicker1></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="status-container">
+                    <div class="status-drop-down">
+                        <div (click)="onSelectStatus()">
+                            <p>Staus</p><i class="fas fa-caret-down" *ngIf="!statusSelected"></i>
+                            <i class="fas fa-caret-up" *ngIf="statusSelected"></i>
+                        </div>
+                    </div>
+                    <div [hidden]="!statusSelected" class="status-drop-down-div">
+                        <p> Completed</p>
+                        <p>Pending</p>
+                        <p>Rejected</p>
+                        <p>On hold</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="divChart">
+            <canvas id="lineChart" height="200px" width="650px"></canvas>
+        </div>
+    </div>
+
+    <div class="deales-div">
+        <div class="deales-header">
+            <h6>Deales Detalis</h6>
+            <div class="drops">
+                <div class="monthly-container">
+                    <div class="monthly-drop-down">
+                        <div (click)="onSelectMonthlyFor()">
+                            <p>Monthly</p><i class="fas fa-caret-down" *ngIf="!monthlyForSelected"></i>
+                            <i class=" fas fa-caret-up" *ngIf="monthlyForSelected"></i>
+                        </div>
+                    </div>
+                    <div [hidden]="!monthlyForSelected" class="monthy-drop-down-div">
+                        <p>Last 30 minutes</p>
+                        <p>Last 6 hours</p>
+                        <p>Last 12 hours</p>
+                        <p>Last week</p>
+                        <p>Last month</p>
+                        <p>Last 6 months</p>
+                        <p>Last year</p>
+                        <p>Selct date</p>
+                    </div>
+                </div>
+                <div class="date-picker-div">
+                    <p style="font-weight: 700;
+                    margin: 7px 7px 0px 0px;">From</p>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="myDatePicker2">
+                        <mat-datepicker-toggle [for]="myDatePicker2" matSuffix>
+                            <mat-icon matDatepickerToggleIcon>arrow_drop_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #myDatePicker2></mat-datepicker>
+                    </mat-form-field>
+                    <p style="font-weight: 700;
+                   margin: 7px 7px 0px 25px;">To</p>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="myDatePicker3">
+                        <mat-datepicker-toggle [for]="myDatePicker3" matSuffix>
+                            <mat-icon matDatepickerToggleIcon>arrow_drop_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #myDatePicker3></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="status-container">
+                    <div class="status-drop-down">
+                        <div (click)="onSelectForStatus()">
+                            <p>Staus</p><i class="fas fa-caret-down" *ngIf="!statusForSelected"></i>
+                            <i class="fas fa-caret-up" *ngIf="statusForSelected"></i>
+                        </div>
+                    </div>
+                    <div [hidden]="!statusForSelected" class="status-drop-down-div">
+                        <p> Completed</p>
+                        <p>Pending</p>
+                        <p>Rejected</p>
+                        <p>On hold</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tablet">
+            <table class="table">
+                <thead class="thead-light ">
+                    <tr class="thead-">
+                        <th scope="col" id="first">Invoice No.</th>
+                        <th scope="col">Country-Region</th>
+                        <th scope="col">Date-time</th>
+                        <th scope="col">Quentity</th>
+                        <th scope="col">Total</th>
+                        <th scope="col" id="last">Status</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let deal of deales">
+                    <tr>
+                        <td>0{{deal.incoiceNo}}</td>
+                        <td>{{deal.countryRegion}}</td>
+                        <td>{{deal.DateTime | date:'dd MMMM yyyy - hh:mm'}}</td>
+                        <td>{{deal.Quentity}}</td>
+                        <td>{{deal.Total}}</td>
+                        <td class="status"><a>{{deal.Status}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="chart-cards-div">
+        <div class="orders-card">
+            <h3>Orders</h3>
+            <div class="orders-chart">
+                <div id="divDoughChart">
+                    <canvas id="doughChart" height="150px" width="150px"></canvas>
+                </div>
+                <div class="date-div">
+                    <div class="date">
+                        <p>{{orderChartData[0]}}</p>
+                        <div>
+                            <i style="color: #9d9de8;" class="fas fa-circle"></i>
+                            <p>Pending</p>
+                        </div>
+                    </div>
+                    <div class="date">
+                        <p>{{orderChartData[1]}}</p>
+                        <div>
+                            <i style="color: #e0d3b9;" class="fas fa-circle"></i>
+                            <p>Delivered</p>
+                        </div>
+                    </div>
+                    <div class="date">
+                        <p>{{orderChartData[2]}}</p>
+                        <div>
+                            <i style="color:red;" class="fas fa-circle"></i>
+                            <p>Rejected</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-product">
+            <h3>Feature product</h3>
+            <div class="product-div">
+                <div class="carusele-button">
+                    <div>
+                        <i class="fas fa-angle-left"></i>
+
+                    </div>
+                    <div>
+                        <i class="fas fa-angle-right"></i>
+
+                    </div>
+                </div>
+                <img src="../../../assets/images/New-Blue-Background-Main-2.jpg">
+                <div>
+                    <p style="font-size: 20px; color: yellow;margin-top: 8px;">☆☆☆☆☆</p>
+                    <p style="font-size: 12px;font-weight: 600; margin-top: 5px;">UTRO-200-1ST-15 C-BESIN</p>
+                    <p style="font-size: 15px;color: #d39aeb;font-weight: 600;margin-top: 8px;">$ 60</p>
+                </div>
+
+            </div>
+            <div class="order-sales">
+                <div>
+                    <p style="font-weight: 600;">Order</p>
+                    <p style="color:#aabed0;">125</p>
+                </div>
+                <div>
+                    <p style="font-weight: 600;">Sales</p>
+                    <p style="color:#aabed0;">7,500</p>
+                </div>
+            </div>
+        </div>
+        <div class="commisions-div">
+            <h3>Commissions</h3>
+            <div class="circle-progress-div">
+                <circle-progress [percent]="65" [titleColor]="'black'" [titleFontSize]='5' [unitsFontSize]="5"
+                    [unitsColor]="'black'" [maxPercent]="100" [radius]="20" [showTitle]="true" [showSubtitle]="false"
+                    [showUnits]="true" [showInnerStroke]="true" [outerStrokeColor]="'#f53636'" [outerStrokeWidth]="2"
+                    [innerStrokeColor]="'aqua'" [innerStrokeWidth]="2" [backgroundStroke]="true"
+                    [backgroundPadding]="-7" [backgroundStrokeWidth]="2" [backgroundColor]="'#f53636'">
+                </circle-progress>
+            </div>
+            <div class="-text-div">
+                <p style="color:red">Discount 5% of the total sales 50,000</p>
+                <p style="color:#aabed0;">2,500</p>
+            </div>
+        </div>
+    </div>
+</div>

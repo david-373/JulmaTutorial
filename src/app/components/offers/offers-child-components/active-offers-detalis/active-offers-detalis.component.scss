@@ -1,0 +1,130 @@
+.active-offers-detalis-div {
+    width: 725px;
+
+    border-radius: 6px;
+    background-color: white;
+    h2 {
+        float: right;
+        padding: 15px 15px 0px 0px;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 900;
+        font-family: system-ui;
+        letter-spacing: 3px;
+        color: #0978be;
+    }
+    .price-div {
+        display: flex;
+        width: 700px;
+        height: 160px;
+        margin: 0 auto;
+
+        .img {
+            height: 160px;
+            width: 170px;
+            border-radius: 20px;
+            background-color: #e8e8e8;
+
+            img {
+                height: 160px;
+                width: 170px;
+                border-radius: 20px;
+            }
+        }
+        .price {
+            display: flex;
+            justify-content: space-between;
+            width: 370px;
+            height: 120px;
+            margin-left: 40px;
+            margin-top: 20px;
+
+            div {
+                h6 {
+                    color: #2b3336;
+                    font-size: 12px;
+                    font-weight: 600;
+                    font-family: "Poppins", sans-serif;
+                    margin-bottom: 20px;
+                }
+                h3 {
+                    color: #828f95;
+                    font-weight: 100;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .detalis-date-div {
+        width: 700px;
+        margin: 0 auto;
+        margin-top: 30px;
+
+        .name-div {
+            display: flex;
+            justify-content: space-between;
+            width: 360px;
+            h5 {
+                color: #293134;
+                font-size: 14px;
+                font-weight: 600;
+                margin: 0;
+            }
+            h4 {
+                color: #0978be;
+                font-size: 15px;
+                font-weight: 600;
+                margin: 0;
+            }
+        }
+        .stars-div {
+            display: flex;
+            color: #ffb901;
+            i {
+                margin-right: 3px;
+            }
+            p {
+                color: #828f95;
+                margin-left: 25px;
+                font-size: 13px;
+            }
+        }
+        .date-whit-icons {
+            div {
+                display: flex;
+                color: #818e94;
+                height: 30px;
+                i {
+                    margin-right: 5px;
+                    font-size: 17px;
+                }
+                p {
+                    margin: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .btn-div {
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding-bottom: 10px;
+        button {
+            outline: none;
+            border: none;
+            background: none;
+            margin: 0 auto;
+
+            width: 145px;
+            height: 35px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 13px;
+            font-family: "Poppins", sans-serif;
+        }
+    }
+}

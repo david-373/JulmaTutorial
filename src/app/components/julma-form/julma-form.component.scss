@@ -1,0 +1,148 @@
+.body-div {
+    display: flex;
+    height: 100%;
+}
+.background {
+    background-image: url("../../../assets/images/buy-online-pharmacy-cartoon-tiny-people-buying-pills-drugstore-healthcare-mobile-medicine-white_109722-1116.jpg");
+    background-size: inherit;
+    margin-top: 10%;
+    width: 50%;
+    background-repeat: no-repeat;
+}
+.form-div {
+    width: 50%;
+
+    img {
+        height: 50px;
+        width: 50px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+}
+
+.formdiv- {
+    padding-left: 50px;
+    width: 420px;
+    margin-top: 170px;
+}
+.form-text-div {
+    h1 {
+        font-size: 27px;
+        margin: 0;
+        font-weight: 700;
+    }
+    p {
+        color: #818e94;
+        font-size: 14px;
+    }
+}
+.lable-div {
+    margin: 0;
+    margin-bottom: 3px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-top: 25px;
+    a {
+        float: right;
+        font-size: 13px;
+        font-weight: 600;
+        color: #5c5cb9;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    input[type="email"] {
+        padding-left: 10px;
+        color: #839096;
+        font-size: 13px;
+    }
+    input[type="password"] {
+        padding-left: 10px;
+        color: #839096;
+        font-size: 13px;
+    }
+}
+.btn-sing-in {
+    color: white;
+    background-color: #5c5cb9;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    width: 370px;
+    height: 35px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.btn-sing-in:disabled {
+    opacity: 0.5;
+}
+
+.or-div {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    hr {
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        width: 145px;
+        margin-top: 14px;
+    }
+}
+
+.gt {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    text-align: center;
+    margin: 0 auto;
+}
+.a {
+    width: 160px;
+    height: 40px;
+    background-color: #f6f0f0;
+    border-radius: 6px;
+    color: black;
+    padding-top: 10px;
+    list-style: none;
+    box-shadow: 2px 2px #ffeaea;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    .fa-google {
+        background: conic-gradient(
+                from -45deg,
+                #ea4335 110deg,
+                #4285f4 90deg 180deg,
+                #34a853 180deg 270deg,
+                #fbbc05 270deg
+            )
+            73% 55%/150% 150% no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        font-size: 15px;
+    }
+    .fa-twitter {
+        color: #8080f7;
+        font-size: 15px;
+    }
+}
+.creat-an-account {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 65px;
+    font-weight: 600;
+    font-size: 13px;
+    a {
+        text-decoration: none;
+        color: #5c5cb9;
+        font-size: 13px;
+        font-weight: 600;
+    }
+}

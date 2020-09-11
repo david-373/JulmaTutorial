@@ -1,0 +1,54 @@
+<div class="body">
+    <div class="sales-div">
+        <h3>Sales</h3>
+        <ul>
+            <li *ngFor="let sale of salesDate">
+                <div class="sales-date-table">
+                    <p>{{sale.title}} </p>
+                    <p>{{sale.date}}<i *ngIf="sale.title == 'Comisions'">%</i>
+                        <i *ngIf="sale.title =='Net Profit'">USD</i>
+
+                    </p>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="orders-div">
+        <h3>Orders
+        </h3>
+        <div class="orders-chart">
+            <div id="divDoughChart">
+                <canvas id="doughChart" height="110px" width="110px"></canvas>
+            </div>
+            <div class="date-div">
+                <div class="date">
+
+                    <i style="color: #bfb884;" class="fas fa-circle"></i>
+                    <p style="margin-right: 20px;color: #aaaabe;">Delivered</p>
+                    <p style="font-weight: 600;font-size: 15px; ">{{orderChartData[0]}}</p>
+
+
+                </div>
+                <div class="date">
+
+                    <i style="color:red ;" class="fas fa-circle"></i>
+                    <p style="margin-right: 20px; color: #aaaabe;">Rejected</p>
+                    <p style="font-weight: 600; font-size: 15px;">{{orderChartData[1]}}</p>
+
+
+                </div>
+                <div class="date">
+
+                    <i style="color:#e8f7f2;" class="fas fa-circle"></i>
+                    <p style="margin-right: 20px; color: #aaaabe;">Requested</p>
+                    <p style="font-weight: 600; font-size: 15px;">{{orderChartData[2]}}</p>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

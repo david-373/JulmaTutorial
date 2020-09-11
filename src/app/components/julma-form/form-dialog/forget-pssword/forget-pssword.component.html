@@ -1,0 +1,31 @@
+<div mat-dialog-content class="dialog-div">
+    <div [hidden]="emailCheck">
+        <i class="fas fa-times" [mat-dialog-close]></i>
+        <p>Email address</p>
+        <input #inp placeholder="username@gmail.com" type="text">
+        <button (click)="emailChecked()">Continue</button>
+    </div>
+
+
+    <div [hidden]="!emailCheck" class="verification-div">
+        <i class="fas fa-times" [mat-dialog-close]></i>
+        <h2>Verificaton</h2>
+        <p>Enter the 4 digit code we sent you <br> via your Email</p>
+        <input type="text" class="digit" #a1>
+        <input type="text" class="digit" #a2>
+        <input type="text" class="digit" #a3>
+        <input type="text" class="digit" #a4>
+        <div style="display: flex;
+        margin: 0 auto;
+        width: 130px;">
+            <p style="color: black;">Code expries in:
+            </p>
+            <p style="color: red;">00:26</p>
+        </div>
+
+
+        <button [mat-dialog-close]="[inp.value,a1.value,a2.value,a3.value,a4.value]">Confrim</button>
+    </div>
+
+
+</div>

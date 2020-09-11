@@ -1,0 +1,145 @@
+<div class="navbardiv">
+    <div class="nav-header">
+        <div>
+            <img src="../../../assets/images/flooop.png" alt="" class="logo">
+
+        </div>
+        <div>
+            <div class="img">
+
+            </div>
+            <h6>Al Abra Store for medical</h6>
+            <p>☆☆☆☆☆</p>
+        </div>
+    </div>
+    <div class="nav-manu">
+        <a routerLink="dashboard" routerLinkActive="activ" #link="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link.isActive"></i>
+            <i class="fas fa-columns">
+
+            </i> Dashboard
+        </a>
+        <a routerLink="orders" routerLinkActive="activ" #link1="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link1.isActive"></i>
+            <i class="fas fa-list-ol">
+
+            </i>Orders
+        </a>
+        <a routerLink="products" routerLinkActive="activ" #link2="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link2.isActive"></i>
+            <i class="fas fa-shopping-basket">
+
+            </i> Products
+        </a>
+        <a routerLink="customers" routerLinkActive="activ" #link3="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link3.isActive"></i>
+            <i class="fas fa-users">
+
+            </i> Customers
+        </a>
+        <a routerLink="reports" routerLinkActive="activ" #link4="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link4.isActive"></i>
+            <i class="fas fa-bug">
+
+            </i>Reports
+        </a>
+        <a routerLink="wallet" routerLinkActive="activ" #link5="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link5.isActive"></i>
+            <i class="fas fa-wallet">
+
+            </i> Wallet
+        </a>
+        <a routerLink="reviews" routerLinkActive="activ" #link6="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link6.isActive"></i>
+            <i class="fas fa-star">
+
+            </i>Reviews
+        </a>
+        <a routerLink="offers" routerLinkActive="activ" #link7="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link7.isActive"></i>
+            <i class="fas fa-percent">
+
+            </i> Offers
+        </a>
+        <a routerLink="helpus" routerLinkActive="activ" #link8="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link8.isActive"></i>
+            <i class="fas fa-question">
+
+            </i>Help us
+        </a>
+        <a routerLink="settings" routerLinkActive="activ" #link9="routerLinkActive">
+            <i class=" fas fa-grip-lines-vertical " [hidden]="!link9.isActive"></i>
+            <i class="fas fa-cogs">
+
+            </i> Settings
+        </a>
+    </div>
+
+</div>
+
+<div class="vertival-nav-bar-div">
+    <div class="vertical-nav-bar">
+        <i class="fas fa-bars"></i>
+        <div class="search-div">
+            <input type="text" placeholder="Search by order number,customer name">
+            <div class="search-drop-down">
+                <p>Orders<i class="fas fa-caret-down"></i> </p>
+                <div *ngIf="false" class="search-drop-down-">
+                    <a href="">Lorem.</a>
+                    <a href="">Lorem</a>
+                    <a href="">Lorem</a>
+                </div>
+            </div>
+            <span>
+                <i class="fas fa-search text-grey">
+                </i>
+            </span>
+        </div>
+        <div class="vertical-nav-bar-">
+            <div class="icons-div">
+                <a routerLink="notification">
+                    <i class="fas fa-bell"></i>
+                </a>
+                <a routerLink="chat">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <div>
+                    <i class="fas fa-wallet"></i>
+
+                </div>
+
+            </div>
+            <div class="dropdowns-div">
+                <div>
+                    <p (click)="showingusd()">USD<i class="fas fa-caret-down"></i> </p>
+                    <div *ngIf="showusd" class="USD-down">
+                        <a href="">USD</a>
+                        <a href="">LYD</a>
+                        <a href="">EGP</a>
+                    </div>
+                </div>
+                <div>
+                    <p (click)="showinglng()"> <i class="fas fa-flag-usa"></i>English <i class="fas fa-caret-down"></i>
+                    </p>
+
+                    <div *ngIf="showlng" class="lang-down">
+                        <i class="fas fa-flag-usa"> <a href="">English</a></i>
+                        <i class="fas fa-flag-usa"><a href="">English</a></i>
+                    </div>
+                </div>
+            </div>
+
+            <img src="../../../assets/images/a65832155622ac173337874f02b218fb.png" alt=""
+                style="height: 30px; width: 30px;">
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+<div class="childs-div">
+    <router-outlet></router-outlet>
+</div>

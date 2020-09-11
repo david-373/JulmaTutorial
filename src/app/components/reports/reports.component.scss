@@ -1,0 +1,160 @@
+.body {
+    height: 94%;
+    width: 96%;
+    margin: auto;
+    margin-top: 3%;
+    h4 {
+        color: #5c5cb9;
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .report-date-div {
+        display: flex;
+        justify-content: space-between;
+        width: 430px;
+        margin-top: 30px;
+        .report-date {
+            display: flex;
+            border: 1px solid #dbdbf8;
+            height: 40px;
+            width: 330px;
+            border-radius: 10px;
+            justify-content: space-between;
+            background-color: white;
+            .inp-report {
+                display: flex;
+                justify-content: space-between;
+                width: 115px;
+                margin: 10px 0px 0px 10px;
+                height: 20px;
+                border-right: 1px solid #dbdbf8;
+                color: red;
+                p {
+                    font-weight: 600;
+                    font-size: 13px;
+                    margin-right: 10px;
+                }
+                i {
+                    font-size: 15px;
+                    margin-top: 1px;
+                }
+            }
+            .data-picker-div {
+                width: 180px;
+                .mat-form-field {
+                    width: 190px;
+                    padding: 0px 30px 0px 0px;
+
+                    ::ng-deep .mat-form-field-wrapper {
+                        padding: 0;
+                    }
+                    ::ng-deep .mat-form-field-flex {
+                        padding: 0;
+                        background: none;
+                    }
+                    ::ng-deep .mat-form-field-underline {
+                        display: none;
+                    }
+                    ::ng-deep.mat-icon {
+                        margin: 0;
+                        line-height: 0;
+                        height: 0;
+                        display: inherit;
+                    }
+                    ::ng-deep .mat-icon-button {
+                        height: 10px;
+                        width: 10px;
+                        outline: none;
+                    }
+                    ::ng-deep .mat-form-field-infix {
+                        padding: 0px 0px 0px 0px;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .print-btn {
+            height: 25px;
+            width: 80px;
+            background-color: aqua;
+            margin-top: 8px;
+            border-radius: 13px;
+            justify-content: space-between;
+            text-align: center;
+            div {
+                display: flex;
+                justify-content: space-between;
+                width: 55px;
+                margin: 0 auto;
+
+                button {
+                    outline: none;
+                    border: none;
+                    background-color: aqua;
+                    color: #4e9ed0;
+                }
+                i {
+                    color: #4e9ed0;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+    .report-type-div {
+        background-color: white;
+        width: 650px;
+        margin-top: 30px;
+        border-radius: 10px;
+        h3 {
+            font-weight: 600;
+            padding: 15px 0px 0px 15px;
+            margin-bottom: 10px;
+        }
+        .mat-tab-nav-bar-div {
+            width: 650px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            .activ-child {
+                border: 1px solid red;
+                div {
+                    p {
+                        color: red;
+                    }
+                    i {
+                        color: red;
+                    }
+                }
+            }
+            a {
+                width: 130px;
+                height: 40px;
+                border-radius: 10px;
+                border: 1px solid #94ccce;
+                margin: 0 auto;
+                text-decoration: none;
+                transition: 1s;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 110px;
+                    height: 30px;
+                    margin: 0 auto;
+                    margin-top: 8px;
+                    p {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: cadetblue;
+                        transition: 1s;
+                    }
+                    i {
+                        color: cadetblue;
+                        font-size: 16px;
+                        transition: 1s;
+                    }
+                }
+            }
+        }
+    }
+}
