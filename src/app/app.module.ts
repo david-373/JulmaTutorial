@@ -36,6 +36,7 @@ import { SettingsCurrencyComponent } from './components/settings/settings-child-
 import { SettingsPostPaidComponent } from './components/settings/settings-child-components/settings-post-paid/settings-post-paid.component';
 import { SettingsRegionComponent } from './components/settings/settings-child-components/settings-region/settings-region.component';
 import { ForgetPsswordComponent } from './components/julma-form/form-dialog/forget-pssword/forget-pssword.component';
+import { TabletItemComponent } from './components/orders/orders-childs-components/tablet-item/tablet-item.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -69,6 +70,7 @@ registerLocaleData(localeFr, 'fr');
     SettingsRegionComponent,
     ForgetPsswordComponent,
     JulmaRegisterComponent,
+    TabletItemComponent,
   ],
   imports: [
     BrowserModule,

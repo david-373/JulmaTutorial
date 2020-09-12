@@ -1,4 +1,5 @@
-<div class="body">
+<button id="back" *ngIf="Item" (click)="goBack()"><i class="fas fa-chevron-left"></i>Back</button>
+<div class="body" *ngIf='!Item'>
     <h4>Orders</h4>
     <div class="drop-down-div">
         <i class="fas fa-grip-lines"></i>
@@ -66,7 +67,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let order of Orders">
+                <tr *ngFor="let order of Orders;let i = index" (click)="goToItem(i)">
                     <td>0000{{order.orderId}}</td>
                     <td>{{order.dateTime | date:'dd MMMM yyyy - hh:mm' }}</td>
                     <td>0000{{order.customerID}}</td>
@@ -80,3 +81,5 @@
     </div>
 
 </div>
+
+<app-tablet-item *ngIf='Item' [OrderItemTabletData]="orderItemTabletData"></app-tablet-item>

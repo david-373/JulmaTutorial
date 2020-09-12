@@ -4,11 +4,22 @@
     margin: auto;
     margin-top: 3%;
 }
+#back {
+    border: none;
+    outline: none;
+    background: none;
+    color: #818e94;
+    margin-top: 20px;
+    margin-left: 40px;
+    position: absolute;
+    i {
+        margin-right: 5px;
+    }
+}
 .tablet {
     background-color: #fff;
-    border-radius: 25px;
-
-    box-shadow: 1px 1px 0px 0px #d9fcd8;
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px 0px rgb(213 216 220);
 }
 h4 {
     color: #5c5cb9;
@@ -23,14 +34,15 @@ h4 {
         border-top: none;
     }
     #first {
-        border-top-left-radius: 20px;
+        border-top-left-radius: 6px;
     }
     #last {
-        border-top-right-radius: 20px;
+        border-top-right-radius: 6px;
     }
 }
 tbody {
     tr {
+        cursor: pointer;
         td {
             color: #6c757d;
             margin: 0;

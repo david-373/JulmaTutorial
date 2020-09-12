@@ -25,7 +25,15 @@ export class OrdersComponent implements OnInit {
     this.selectedStatus = !this.selectedStatus
     this.colorStatus = !this.colorStatus
   }
-
+  Item = false;
+  orderItemTabletData;
+  goToItem(i) {
+    this.Item = true
+    this.orderItemTabletData = this.ordersService.getOrderItemTableData(i)
+  }
+  goBack() {
+    this.Item = false
+  }
 
   constructor(private ordersService: OrdersService) { }
 

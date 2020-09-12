@@ -1,0 +1,73 @@
+<button class="print"><i class="fas fa-print"></i>Print</button>
+
+
+<div class="host">
+    <div class="invoices-div">
+
+        <div class="from-div">
+            <h2>Invoices from:</h2>
+            <p>Name Company</p>
+            <p>{{OrderItemTabletData.countryRegion}}</p>
+        </div>
+        <div class="to-div">
+            <h2>Invoices to:</h2>
+            <p>Customer name</p>
+            <p>{{OrderItemTabletData.countryRegion}}</p>
+        </div>
+        <div class="order-div">
+            <div>
+                <h2>Order ID:</h2>
+                <p style="color: #0978be;">0000{{OrderItemTabletData.customerID}}</p>
+            </div>
+            <div>
+                <h2>Order status:</h2><button>{{OrderItemTabletData.Satus}}</button>
+            </div>
+            <div>
+                <h2>Order date:</h2>
+                <p style="color:#818e94">{{OrderItemTabletData.dateTime | date}}</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="tablet">
+        <table class="table">
+            <thead class="thead-light ">
+                <tr class="thead-">
+                    <th scope="col" id="first">#</th>
+                    <th scope="col" style="padding-left: 15px;">Item</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quentity</th>
+                    <th scope="col" id="last">Total price</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let data of _OrderItemTabletData">
+                    <td style="padding-left: 35px;">{{data.num}}</td>
+                    <td>{{data.itme}} </td>
+                    <td>{{data.price}}</td>
+                    <td>{{data.quenity}}</td>
+                    <td>{{data.totalPrice}}</td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <div class="tablet-total-data-div">
+        <div>
+            <h2>Subtotal</h2>
+            <h3>$240</h3>
+        </div>
+        <div>
+            <h2>VAT %5</h2>
+            <h3>$22.5</h3>
+        </div>
+        <div style="color: #ed1f2c;">
+            <h2>Amount Due</h2>
+            <h3>$218</h3>
+        </div>
+    </div>
+</div>
