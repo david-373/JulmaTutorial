@@ -68,12 +68,14 @@
             </thead>
             <tbody>
                 <tr *ngFor="let order of Orders;let i = index" (click)="goToItem(i)">
-                    <td>0000{{order.orderId}}</td>
+                    <td class="first">0000{{order.orderId}}</td>
                     <td>{{order.dateTime | date:'dd MMMM yyyy - hh:mm' }}</td>
                     <td>0000{{order.customerID}}</td>
                     <td>{{order.countryRegion}}</td>
                     <td>{{order.Payment}}</td>
-                    <td class="status"><a>{{order.Satus}}</a></td>
+                    <td class="status"><a
+                            [ngClass]="{'colorRejected': order.Satus == 'Rejected', 'colorCompleted':order.Satus == 'Completed',  'colorStatus':order.Satus == 'On Hold' || order.Satus == 'Pendig'}">{{order.Satus}}</a>
+                    </td>
                 </tr>
 
             </tbody>
@@ -82,4 +84,4 @@
 
 </div>
 
-<app-tablet-item *ngIf='Item' [OrderItemTabletData]="orderItemTabletData"></app-tablet-item>
+<app-tablet-item *ngIf='Item' [OrderItemTabletData]=" orderItemTabletData"></app-tablet-item>

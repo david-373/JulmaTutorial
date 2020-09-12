@@ -10,11 +10,17 @@ export class TabletItemComponent implements OnInit {
   @Input() OrderItemTabletData
 
   constructor(private ordersService: OrdersService) { }
+  totalPrice: number = 0
   _OrderItemTabletData
+  pracentToatal(p) {
+    return (this.totalPrice / 100) * p
+  }
   ngOnInit(): void {
-    console.log(this.OrderItemTabletData)
     this._OrderItemTabletData = this.OrderItemTabletData.orderItemTableData
-    console.log(this._OrderItemTabletData)
+    for (let i = 0; i < this._OrderItemTabletData.length; i++) {
+      this.totalPrice += this._OrderItemTabletData[i].totalPrice
+    }
+
 
   }
 

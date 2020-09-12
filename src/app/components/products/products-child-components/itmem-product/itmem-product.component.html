@@ -1,0 +1,50 @@
+<div class="body">
+    <div class="images">
+        <div class="big">
+            <img src="{{singelProsuctData.images.image0}}" alt="">
+        </div>
+        <div class="small">
+
+            <img src="{{singelProsuctData.images.image1}}" alt="">
+
+
+            <img src="{{singelProsuctData.images.image2}}" alt="">
+
+
+            <img src="{{singelProsuctData.images.image3}}" alt="">
+
+        </div>
+    </div>
+    <div class="avilable-stock-div">
+        <h2>Avilable Stock</h2>
+        <p class="p">Pharmancy</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <p>{{singelProsuctData.reiting}} reviews</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum officiis sequi ea
+            provident labore, earum incidunt nobis quod est expedita quo alias aliquam.
+            Ipsum odio tenetur hic laudantium voluptatibus nonsoluta eligendi accusantium
+            suscipit delectus, id eaque ut alias vitae asinc its only right and a shord ameising work wiht also!
+        </p>
+        <div *ngFor="let Whom of singelProsuctData.whom" class="whom"
+            [ngClass]="{'Wholesalers':Whom.whomName == 'Wholesalers','Retailers':Whom.whomName == 'Retailers','Buyers':Whom.whomName == 'Buyers'}">
+            <p>{{Whom.whomName}}</p>
+            <p>{{Whom.box | currency:'USD':'symbol-narrow':'1.0-0'}}/box</p>
+        </div>
+        <div class="stock">
+            <p>Avilable Stock</p>
+            <p>{{singelProsuctData.stock}}/Box</p>
+        </div>
+        <div class="btns">
+            <button style="background-color:#e2deff;color:#0978be ;">Edit product</button>
+            <button style="background-color:#ffeae8; color: #ed1f2c;">Delete product</button>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share-alt"></i>
+        </div>
+    </div>
+</div>

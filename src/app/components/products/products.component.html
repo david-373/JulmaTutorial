@@ -1,4 +1,7 @@
-<div class="body">
+<button class="back" *ngIf="item" (click)="goBack()"><i class="fas fa-chevron-left"></i>Back</button>
+
+<app-itmem-product *ngIf="item" [singelProsuctData]="singelProsuctData"></app-itmem-product>
+<div class="body" *ngIf="!item">
     <h4>Products</h4>
     <div class="body-div">
         <div class="drop-down-div">
@@ -49,8 +52,8 @@
 
         </div>
 
-        <div class="card-div" *ngFor="let product of products">
-            <img src="{{product.img}}" class="card-img-top-z">
+        <div class="card-div" *ngFor="let product of products; let i = index" (click)="goToItem(i)">
+            <img src="{{product.images.image0}}" class="card-img-top-z">
             <div class="card-body-div">
                 <div class="name-div">
                     <p>{{product.name}} </p>

@@ -4,6 +4,18 @@
     margin: auto;
     margin-top: 3%;
 }
+.back {
+    outline: none;
+    border: none;
+    background: none;
+    color: #818e94;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+    i {
+        margin-right: 5px;
+    }
+}
 h4 {
     color: #5c5cb9;
     font-weight: 700;

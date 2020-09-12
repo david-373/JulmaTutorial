@@ -59,15 +59,15 @@
     <div class="tablet-total-data-div">
         <div>
             <h2>Subtotal</h2>
-            <h3>$240</h3>
+            <h3>{{totalPrice | currency:'USD':'symbol-narrow':'1.0-0'}}</h3>
         </div>
         <div>
             <h2>VAT %5</h2>
-            <h3>$22.5</h3>
+            <h3>{{pracentToatal(5) | currency:'USD':'symbol-narrow':'1.0-0'}}</h3>
         </div>
         <div style="color: #ed1f2c;">
             <h2>Amount Due</h2>
-            <h3>$218</h3>
+            <h3>{{totalPrice - pracentToatal(5) | currency:'USD':'symbol-narrow':'1.0-0'}}</h3>
         </div>
     </div>
 </div>

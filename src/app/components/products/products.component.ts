@@ -6,7 +6,16 @@ import { ProductsService } from '../../services';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+  item = false
+  goToItem(i) {
+    this.item = true
+    this.singelProsuctData = this.productsService.getSingelProductByIndex(i)
+  }
+  singelProsuctData
+  goBack() {
+    this.item = false
 
+  }
   public products = this.productsService.getProductData();
   productColor = false;
   onSelectProduct() {

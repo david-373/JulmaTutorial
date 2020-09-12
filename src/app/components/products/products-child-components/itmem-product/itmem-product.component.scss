@@ -1,0 +1,136 @@
+.body {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 75px;
+    display: flex;
+    .images {
+        width: 40%;
+
+        .big {
+            width: 90%;
+            img {
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                width: 100%;
+                height: 400px;
+                margin: 0 auto;
+            }
+        }
+        .small {
+            width: 90%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            img {
+                border-radius: 5px;
+                width: 32%;
+                height: 110px;
+            }
+        }
+    }
+    .avilable-stock-div {
+        width: 52%;
+        h2 {
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 19px;
+            margin-bottom: 0;
+            color: #262626;
+        }
+        .p {
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #818e94;
+        }
+        .stars {
+            display: flex;
+            font-size: 12px;
+            i {
+                color: #ffc400;
+                margin-top: 4px;
+            }
+            p {
+                margin: 0;
+                margin-left: 10px;
+                font-size: 10px;
+                font-weight: 600;
+                color: #808080;
+            }
+        }
+        p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #a7a7a7;
+        }
+        .whom {
+            display: flex;
+            border-radius: 6px;
+            width: 60%;
+            margin-top: 10px;
+            justify-content: space-between;
+            padding: 15px 20px 15px 20px;
+            p {
+                margin: 0;
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+        .Wholesalers {
+            background-color: #ebf9ea;
+            border: 1px solid #cbc0fe;
+            p {
+                color: #876bfe;
+            }
+        }
+        .Retailers {
+            background-color: #f3f1ff;
+            border: 1px solid #95e1bf;
+            p {
+                color: #2bc48a;
+            }
+        }
+        .Buyers {
+            background-color: #fff8e5;
+            border: 1px solid #fed669;
+            p {
+                color: #ffb901;
+            }
+        }
+        .stock {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            p {
+                font-size: 15px;
+                font-weight: 600;
+                color: #262626;
+            }
+        }
+        .btns {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            button {
+                outline: none;
+                border: none;
+                border-radius: 8px;
+                width: 35%;
+                height: 35px;
+            }
+            i {
+                font-size: 20px;
+                margin-top: 8px;
+            }
+            .fa-heart {
+                color: #ed1f2c;
+            }
+            .fa-share-alt {
+                color: #0978be;
+            }
+        }
+    }
+}

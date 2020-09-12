@@ -9,6 +9,7 @@ export class OrdersComponent implements OnInit {
   Orders = this.ordersService.getOrderData()
   selectedDate = false;
   color = false;
+  StatusNoStyle = ['Rejected', 'Completed']
   onSelect() {
     this.selectedDate = !this.selectedDate
     this.color = !this.color
