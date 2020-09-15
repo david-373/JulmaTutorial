@@ -1,0 +1,19 @@
+<div class="body">
+    <h4>Add customer</h4>
+    <div class="inp-div">
+        <i class="fas fa-search"></i>
+        <input type="search" [(ngModel)]="search">
+    </div>
+
+    <div class="search-result-div">
+        <div *ngFor="let f of (folderObjs | filter:search)as folder">
+            {{f.name}}
+            {{f.size}}
+        </div>
+    </div>
+
+
+    <div *ngIf="(folderObjs | filter:search).length <1">
+        Not Found
+    </div>
+</div>

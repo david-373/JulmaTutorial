@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SettingsService } from '../../../../services'
+import { SettingsService } from '../../../../services';
+import { AddCustomerComponent } from './dialog/add-customer/add-customer.component'
+import { MatDialog } from '@angular/material/dialog'
 @Component({
   selector: 'app-settings-post-paid',
   templateUrl: './settings-post-paid.component.html',
@@ -8,7 +10,12 @@ import { SettingsService } from '../../../../services'
 export class SettingsPostPaidComponent implements OnInit {
   whiteListData = this.settingsService.getPostPaidWhiteListData()
   blackListData = this.settingsService.getPostPaidBlackListData()
-  constructor(private settingsService: SettingsService) { }
+  addCustomer() {
+    const dialogRef = this.dialog.open(AddCustomerComponent, {
+      data: {}
+    })
+  }
+  constructor(private settingsService: SettingsService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }

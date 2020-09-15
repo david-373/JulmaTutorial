@@ -1,0 +1,22 @@
+<div class="body">
+    <div class="heading">
+        <h3>User Detalis</h3>
+        <i class="fas fa-times" (click)="close()"></i>
+    </div>
+    <div class="data-div">
+        <h2>{{singelUserData.singelUser.userName}}</h2>
+        <p style="font-size: 16px;
+        color: #333333;margin-bottom: 0;">{{singelUserData.singelUser.jobRole}}</p>
+        <p>{{singelUserData.singelUser.location}}</p>
+        <p>{{singelUserData.singelUser.Email}}</p>
+        <p>000{{singelUserData.singelUser.mobile}}</p>
+    </div>
+    <div class="avilable">
+        <h3>Available Jobs</h3>
+        <p *ngFor="let avilable of singelUserData.singelUser.avilable">{{avilable}}</p>
+    </div>
+    <div class="btns-div">
+        <button style="background-color: #e2deff;color:#0978be ;" (click)="close()">Edit user</button>
+        <button style="background-color: #ffeae8;color:#ef3843 ;" (click)="removeUser();close()">Delete user</button>
+    </div>
+</div>

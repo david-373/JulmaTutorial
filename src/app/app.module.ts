@@ -38,6 +38,12 @@ import { SettingsRegionComponent } from './components/settings/settings-child-co
 import { ForgetPsswordComponent } from './components/julma-form/form-dialog/forget-pssword/forget-pssword.component';
 import { TabletItemComponent } from './components/orders/orders-childs-components/tablet-item/tablet-item.component';
 import { ItmemProductComponent } from './components/products/products-child-components/itmem-product/itmem-product.component';
+import { EditUserComponent } from './components/settings/settings-child-components/settings-users/dialog/edit-user/edit-user.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DetalisComponent } from './components/settings/settings-child-components/settings-users/dialog/user-detalis/detalis/detalis.component';
+import { AddUserComponent } from './components/settings/settings-child-components/settings-users/dialog/add-user/add-user.component';
+import { AddCustomerComponent } from './components/settings/settings-child-components/settings-post-paid/dialog/add-customer/add-customer.component';
+import { FilterPipe } from './components/settings/settings-child-components/settings-post-paid/filter.pipe'
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -73,6 +79,11 @@ registerLocaleData(localeFr, 'fr');
     JulmaRegisterComponent,
     TabletItemComponent,
     ItmemProductComponent,
+    EditUserComponent,
+    DetalisComponent,
+    AddUserComponent,
+    AddCustomerComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -92,7 +103,9 @@ registerLocaleData(localeFr, 'fr');
     }),
     MatTabsModule,
     MatProgressBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule
+
 
   ],
   providers: [{

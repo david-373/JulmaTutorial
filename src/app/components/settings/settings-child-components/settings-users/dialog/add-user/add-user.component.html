@@ -1,0 +1,69 @@
+<div class="body">
+    <h3>Add new user</h3>
+    <div class="inputs-div">
+        <div>
+            <p>User name</p>
+            <input type="text" placeholder="Enter user name" #name>
+        </div>
+        <div>
+            <p>Job role</p>
+            <input type="text" placeholder="Enter job role" #job>
+        </div>
+        <div>
+            <p>Email address</p>
+            <input type="text" placeholder="username@gmail.com" #email>
+        </div>
+        <div>
+            <p>Mobile number</p>
+            <input type="text" placeholder="000000000" #mobile>
+        </div>
+        <div>
+            <p>Location</p>
+            <input type="text" placeholder="Enter location" #location>
+        </div>
+    </div>
+    <div class="checkbox-div">
+        <p>Available Jobs</p>
+        <div>
+            <input type="checkbox" #ch1 value="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, est!"
+                id="ch1">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, est!</p>
+        </div>
+        <div>
+            <input type="checkbox" #ch2 value="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, error"
+                id="ch2">
+            <p for="ch2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, error.
+            </p>
+        </div>
+        <div>
+            <input type="checkbox" #ch3
+                value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, qui." id="ch3">
+            <p for="ch3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, qui.
+            </p>
+        </div>
+        <div>
+            <input type="checkbox" #ch4
+                value="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, corporis!" id="ch4">
+            <p for="ch4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, corporis!
+            </p>
+        </div>
+        <div>
+            <input type="checkbox" #ch5 value="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, numquam!"
+                id="ch5">
+            <p for="ch5"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, numquam!
+            </p>
+        </div>
+        <div>
+            <input type="checkbox" #ch6 value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, nam."
+                id="ch6">
+            <p for="ch6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, nam.
+            </p>
+        </div>
+    </div>
+    <div class="btns-div">
+        <button style="background-color: #e8e8e8;color: #262626;" (click)="close()">Cancle</button>
+        <button style="background-color: #0978be; color: white;"
+            [mat-dialog-close]="[name?.value,job?.value,email?.value,mobile?.value,location?.value,ch1,ch2,ch3,ch4,ch5,ch6]">Edit
+            user</button>
+    </div>
+</div>

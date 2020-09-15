@@ -1,0 +1,63 @@
+::ng-deep .mat-dialog-container {
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+.body {
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        h3 {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        i {
+            font-size: 18px;
+            color: #ee2936;
+        }
+    }
+    .data-div {
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+        h2 {
+            font-size: 17px;
+            margin-bottom: 0;
+            font-weight: 600;
+            color: #0978be;
+        }
+        p {
+            margin: 0;
+            margin-bottom: 5px;
+            color: #8b8b8b;
+        }
+    }
+    .avilable {
+        margin-top: 15px;
+        h3 {
+            font-weight: 600;
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+        p {
+            color: #8b8b8b;
+            margin-left: 3px;
+            font-size: 14px;
+        }
+    }
+    .btns-div {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        button {
+            outline: none;
+            border: none;
+            width: 45%;
+            height: 40px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+}

@@ -27,6 +27,7 @@
     "chart.js": "^2.9.3",
     "moment": "^2.27.0",
     "ng-circle-progress": "^1.5.1",
+    "ng2-carouselamos": "^4.1.0",
     "ng2-charts": "^2.4.0",
     "open-iconic": "^1.1.1",
     "rxjs": "~6.5.5",

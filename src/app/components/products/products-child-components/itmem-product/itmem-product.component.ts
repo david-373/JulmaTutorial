@@ -7,17 +7,29 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ItmemProductComponent implements OnInit {
   @Input() singelProsuctData
-  imZad = [
-    { name: 'Retailers', num: 30 },
-    { name: 'Wholesalers', num: 20 },
-    { name: 'Buyers', num: 50 },
 
-  ]
-
+  image;
+  img0;
+  img1;
+  img2;
+  img3;
+  changeImg(i) {
+    if (i == 1) {
+      this.img0 = this.img1
+    } else if (i == 2) {
+      this.img0 = this.img2
+    } else if (i == 3) {
+      this.img0 = this.img3
+    }
+  }
   constructor() { }
-
   ngOnInit(): void {
-    console.log(this.singelProsuctData)
+
+    this.image = this.singelProsuctData.images
+    this.img0 = this.image.image0
+    this.img1 = this.image.image1
+    this.img2 = this.image.image2
+    this.img3 = this.image.image3
   }
 
 }

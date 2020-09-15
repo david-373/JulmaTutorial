@@ -1,4 +1,4 @@
-<button>Add new user</button>
+<button (click)="addUser()">Add new user</button>
 <div class="previous-offers-tablet-div">
     <div class="tablet">
         <table class="table">
@@ -12,33 +12,31 @@
                     <th scope="col" id="last" style="text-align: center;">Options</th>
                 </tr>
             </thead>
-            <tbody *ngFor="let data of dataTble">
+            <tbody *ngFor="let data of dataTble;let i = index">
                 <tr>
-                    <td>#{{data.num}}</td>
-                    <td>{{data.userName}} Assi</td>
+                    <td>{{data.num}}</td>
+                    <td>{{data.userName}} </td>
                     <td>{{data.jobRole}}</td>
                     <td>{{data.Email}}</td>
                     <td>009{{data.mobile}}</td>
                     <td class="option">
                         <div style="display: flex;justify-content: space-around;">
-                            <a style="color: #167fc2;">
+                            <a style="color: #167fc2;" (click)="openUserAllData(i)">
                                 <i class="far fa-folder-open"></i>
                                 <p>Open</p>
                             </a>
-                            <a style="color: #167fc2;">
+                            <a style="color: #167fc2;" (click)="editUser(i)">
                                 <i class="fas fa-pen-alt"></i>
                                 <p>Edit</p>
                             </a>
                             <a style="color: #ed2330;">
                                 <i class="far fa-trash-alt"></i>
-                                <p>Delete</p>
+                                <p (click)="removeUser(data)">Delete</p>
                             </a>
                         </div>
 
                     </td>
                 </tr>
-
-
             </tbody>
         </table>
     </div>

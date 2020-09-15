@@ -1,0 +1,36 @@
+::ng-depp .mat-dialog-container {
+    border-radius: 10px;
+}
+.body {
+    h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #464646;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .inp-div {
+        position: relative;
+        input {
+            outline: none;
+            border: 1px solid #efefef;
+            width: 220px;
+            height: 35px;
+            border-radius: 10px;
+            background: none;
+            padding-left: 30px;
+        }
+        i {
+            position: absolute;
+            font-size: 15px;
+            color: #818e94;
+            top: 10px;
+            left: 10px;
+        }
+    }
+    .search-result-div {
+        border: 1px solid #efefef;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+}
