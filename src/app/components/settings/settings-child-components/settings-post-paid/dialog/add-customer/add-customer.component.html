@@ -6,11 +6,12 @@
     </div>
 
     <div class="search-result-div">
-        <div *ngFor="let f of (folderObjs | filter:search)as folder">
-            {{f.name}}
-            {{f.size}}
+        <div *ngFor="let f of (folderObjs | filter:search)">
+            <p #dynamic>{{f.userName}}</p>
         </div>
+
     </div>
+    <button (click)="addCustomer()">ADD</button>
 
 
     <div *ngIf="(folderObjs | filter:search).length <1">

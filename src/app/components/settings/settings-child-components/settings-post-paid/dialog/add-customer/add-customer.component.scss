@@ -1,5 +1,6 @@
-::ng-depp .mat-dialog-container {
+::ng-deep .mat-dialog-container {
     border-radius: 10px;
+    padding-bottom: 10px;
 }
 .body {
     h4 {
@@ -32,5 +33,15 @@
         border: 1px solid #efefef;
         border-radius: 10px;
         padding-left: 10px;
+    }
+    button {
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        background-color: #0978be;
+        width: 220px;
+        height: 35px;
+        color: white;
+        margin-top: 10px;
     }
 }

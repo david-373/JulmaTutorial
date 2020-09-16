@@ -5,4 +5,5 @@ export { CustomersService } from './customers.service';
 export { ReportsService } from './reports.service';
 export { WalletService } from './wallet.service';
 export { OffersService } from './offers.service';
-export {SettingsService} from './settings.service'
+export { SettingsService } from './settings.service';
+export { NotificationsService } from './notifications.service'

@@ -41,7 +41,7 @@
                     <td>{{listData.orderLimit | currency:'USD':'symbol-narrow':'1.0-0'}}</td>
                     <td class="option">
                         <div style="display: flex;justify-content: space-around;">
-                            <a style="color: #167fc2;">
+                            <a style="color: #167fc2;" (click)="openSendNotafication(listData.customerName)">
 
                                 <p>Send notification</p>
                             </a>
@@ -87,7 +87,7 @@
                     <td>{{listData.orderLimit | currency:'USD':'symbol-narrow':'1.0-0'}}</td>
                     <td class="option">
                         <div style="display: flex;justify-content: space-around;">
-                            <a style="color: #167fc2;">
+                            <a style="color: #167fc2;" (click)="openSendNotafication(listData.customerName)">
 
                                 <p>Send notification</p>
                             </a>

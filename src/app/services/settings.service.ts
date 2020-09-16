@@ -12,7 +12,7 @@ export class SettingsService {
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, delectus',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, delectus',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, delectus'
-      ]
+      ], days: 8, OrderNo: 1314, orderLimit: 5005
     },
     {
       num: '2', userName: 'Dawoad Khamis', jobRole: 'Supervisor', Email: 'username@gmail.com', mobile: 6902884, location: '', avilable: [
@@ -23,7 +23,7 @@ export class SettingsService {
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, delectus',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, delectus',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, delectus'
-      ]
+      ], days: 8, OrderNo: 1314, orderLimit: 5005
     },
     {
       num: '3', userName: 'Mickel Jackson', jobRole: 'Admin', Email: 'username@gmail.com', mobile: 7000052, location: '', avilable: [
@@ -33,7 +33,7 @@ export class SettingsService {
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, delectus',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, delectus',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, delectus'
-      ]
+      ], days: 8, OrderNo: 1314, orderLimit: 5005
     },
   ];
   addUser(data) {
@@ -107,6 +107,27 @@ export class SettingsService {
   public getPostPaidWhiteListData() {
     return this.postPaidWhiteListData
   }
+  newPostPaidListData
+  public pushNewCustomer(userName) {
+    this.newPostPaidListData = this.UserTableData.filter((data) => {
+      return data.userName == userName
+    });
+    console.log(this.newPostPaidListData)
+    this.postPaidBlackListData.push(new constructorForNewPostPaidListData(
+      this.postPaidBlackListData.length + 1,
+      this.newPostPaidListData[0].userName,
+      this.newPostPaidListData[0].days,
+      this.newPostPaidListData[0].OrderNo,
+      this.newPostPaidListData[0].orderLimit)
+    )
+    this.postPaidWhiteListData.push(new constructorForNewPostPaidListData(
+      this.postPaidBlackListData.length + 1,
+      this.newPostPaidListData[0].userName,
+      this.newPostPaidListData[0].days,
+      this.newPostPaidListData[0].OrderNo,
+      this.newPostPaidListData[0].orderLimit)
+    )
+  }
   public postPaidBlackListData = [
     { num: 1, customerName: 'Marwan Assi', days: 8, orderNo: 2536, orderLimit: 2100 },
     { num: 2, customerName: 'Usein Bold', days: 32, orderNo: 9800, orderLimit: 8600 },
@@ -128,4 +149,11 @@ function pushNewUserConstructor(num, userName, jobRole, Email, mobile, location,
     c1, c2, c3, c4, c5, c6
   ]
 
+}
+function constructorForNewPostPaidListData(num, customerName, days, orderNo, orederLimit) {
+  this.num = num,
+    this.customerName = customerName,
+    this.days = days,
+    this.orderNo = orderNo,
+    this.orderLimit = orederLimit
 }

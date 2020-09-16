@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NotificationsService } from '../../services'
 @Component({
   selector: 'app-notification',
   templateUrl: './notification.component.html',
@@ -7,13 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationComponent implements OnInit {
 
-  notafications = [
-    { fullName: 'Name Name', message: 'Lorem ipsum dolor sit amet consectetur adipisicing.' },
-    { fullName: 'Name Name', message: 'Lorem ipsum dolor sit amet consectetur adipisicing.' },
-    { fullName: 'Name Name', message: 'Lorem ipsum dolor sit amet consectetur adipisicing.' },
+  notafications = this.notificationsService.getNotification()
 
-  ]
-  constructor() { }
+
+  constructor(private notificationsService: NotificationsService) { }
 
   ngOnInit(): void {
   }

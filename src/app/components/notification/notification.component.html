@@ -6,11 +6,18 @@
         <div class="notafication-body-div">
             <div *ngFor="let notafication of notafications; let ind = index">
                 <i class="fas fa-bell"></i>
+
                 <p class="name-p">{{notafication.fullName}}</p>
-                <p class="text-p">{{notafication.message}}</p>
-                <i class="fas fa-trash-alt" (click)="removeNots(notafication)"></i>
+
+                <div style="display: contents;">
+                    <p class="text-p">{{notafication.message}}</p>
+
+                </div>
+
+
+                <i class="fas fa-trash-alt" (click)="removeNots(notafication)" style="margin-right: 0;"></i>
+
             </div>
         </div>
-    </div>
 
-</div>
+    </div>

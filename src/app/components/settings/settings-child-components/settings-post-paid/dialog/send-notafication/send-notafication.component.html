@@ -1,0 +1,10 @@
+<div class="body">
+    <h4>Notification</h4>
+    <div>
+        <textarea maxlength="50" [(ngModel)]="notificationText" #notificationTextArea>
+
+        </textarea>
+        <p>{{notificationText.length}}/50</p>
+    </div>
+    <button (click)="sendNotification();notificationTextArea.value = ''">Send</button>
+</div>
