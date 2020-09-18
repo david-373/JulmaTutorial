@@ -1,0 +1,107 @@
+<div class="body">
+    <div class="photo">
+        <h3>Attach photo</h3>
+        <button><i class="fas fa-image"></i></button>
+    </div>
+    <div class="body-">
+        <div>
+            <h3>Type offer</h3>
+
+            <select #offerType>
+                <option value="Singel offer">Singel offer</option>
+                <option value="Collection offer">Collection offer</option>
+            </select>
+
+        </div>
+        <div>
+            <h3>Product type</h3>
+            <button (click)="selectTypeProduct('Shop')" [ngClass]="{'selectedProduct':Shop}">Shop</button>
+            <button (click)="selectTypeProduct('Pharmacy')" [ngClass]="{'selectedProduct':Pharmacy}">Pharmacy</button>
+            <button (click)="selectTypeProduct('Clinic')" [ngClass]="{'selectedProduct':Clinic}">Clinic</button>
+            <button (click)="selectTypeProduct('Mall')" [ngClass]="{'selectedProduct':Mall}">Mall</button>
+        </div>
+        <div>
+            <h3>Product name</h3>
+            <input type="text" placeholder="Enter your product name" #productName>
+        </div>
+        <div>
+            <h3>Type</h3>
+            <button (click)="selectType('Package')" [ngClass]="{'selectedType':Package}">Package</button>
+            <button (click)="selectType('Box')" [ngClass]="{'selectedType':Box}">Box</button>
+            <button (click)="selectType('Piece')" [ngClass]="{'selectedType':Piece}">Piece</button>
+        </div>
+        <div>
+            <h3>Avilable stock</h3>
+            <input type="text" placeholder="500" #Stock>
+        </div>
+        <div class="price">
+            <h3>Price</h3>
+
+            <select #priceBy>
+                <option value="" disabled selected hidden>Choose Gender...</option>
+                <option value="Buyers">Buyers</option>
+                <option value="Retailers">Retailers</option>
+                <option value="Wholesalers">Wholesalers</option>
+            </select>
+
+            <div>
+                <input type="text" #price maxlength="6">
+                <p>USD</p>
+            </div>
+        </div>
+        <div class="offer-discount-div">
+            <div class="offer">
+                <h3>Offer period</h3>
+                <button (click)="selectPeriod('Hourly')" [ngClass]="{'selectedPeriod':Hourly}">Hourly</button>
+                <button (click)="selectPeriod('Daily')" [ngClass]="{'selectedPeriod':Daily}">Daily</button>
+                <div class="date-picker-div">
+                    <div>
+                        <p>From</p>
+                        <mat-form-field>
+                            <input matInput [matDatepicker]="myDatePicker2">
+                            <mat-datepicker-toggle [for]="myDatePicker2" matSuffix>
+                                <mat-icon matDatepickerToggleIcon>arrow_drop_up</mat-icon>
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #myDatePicker2></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <p>To</p>
+                        <mat-form-field>
+                            <input matInput [matDatepicker]="myDatePicker3">
+                            <mat-datepicker-toggle [for]="myDatePicker3" matSuffix>
+                                <mat-icon matDatepickerToggleIcon>arrow_drop_up</mat-icon>
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #myDatePicker3></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+            </div>
+            <div class="discount">
+                <h3>Discount</h3>
+                <div style="border-bottom: 2px solid #e5e5e5;">
+                    <div>
+                        <input type="text" placeholder="parcent" #parcent maxlength="2">
+                        <p style="font-size: 12px;
+                        color: #9b9797;">%</p>
+                    </div>
+                    <h4 (click)="addPrice(priceBy.value,price.value,parcent.value)" style="cursor: pointer;">Add price
+                    </h4>
+                </div>
+                <div *ngFor="let pricedata of priceData;let i = index">
+                    <h4 style="color: #585858;">{{pricedata.by}}</h4>
+                    <h4 style="color:#4f4f4f ;">{{pricedata.price | currency:'USD':'symbol-narrow':'1.0-0'}}</h4>
+                    <h4 style="color: #1981c2;">{{pricedata.priceItog  | currency:'USD':'symbol-narrow':'1.0-0'}}</h4>
+                    <i class="fas fa-times" (click)="removePrice(pricedata)" style="cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btns-div">
+        <button style="background-color: #e8e8e8;" (click)="close()">Cancel</button>
+        <button style="background-color: #0978be;color: white;"
+            (click)="addNewOffer(offerType.value,productName.value,Stock.value);close()">Save</button>
+    </div>
+</div>

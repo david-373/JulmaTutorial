@@ -6,33 +6,33 @@
         </div>
         <div class="price">
             <div class="buyers-price">
-                <h6>buyers</h6>
+                <h6>{{offerData.buyers.name}}</h6>
                 <h3 style=" text-decoration: line-through;">
-                    {{offerData.buyers.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+                    {{offerData.buyers?.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
                 <h3 style="color: #ed1f2c; font-weight: 600;">
-                    {{offerData.buyers.beforPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+                    {{offerData.buyers?.beforPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
             </div>
             <div class="retailers-price">
-                <h6>Retailers</h6>
+                <h6>{{offerData.retailers.name}}</h6>
                 <h3 style="text-decoration: line-through;">
-                    {{offerData.Retailers.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+                    {{offerData.retailers?.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
                 <h3 style="color: #ed1f2c; font-weight: 600;">
-                    {{offerData.Retailers.beforPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+                    {{offerData.retailers?.beforPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
             </div>
             <div class="wholesalers-price">
-                <h6>Wholesalers</h6>
+                <h6>{{offerData.wholesalers.name}}</h6>
                 <h3 style="text-decoration: line-through;">
-                    {{offerData.Wholesalers.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}
+                    {{offerData.wholesalers?.afterPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}
                 </h3>
                 <h3 style="color: #ed1f2c; font-weight: 600;">
-                    {{offerData.Wholesalers.beforPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
+                    {{offerData.wholesalers?.beforPrice | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h3>
             </div>
         </div>
     </div>
     <div class="detalis-date-div">
         <div class="name-div">
             <h5>{{offerData.fullName}}{{offerData.fullName}}{{offerData.fullName}}</h5>
-            <h4>(Single offer)</h4>
+            <h4>({{offerData.Typeoffer}})</h4>
         </div>
         <p style="margin-top: -5px;margin-bottom:8px;
         font-size: 12px;
@@ -43,7 +43,7 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="far fa-star"></i>
-            <p>{{offerData.reviews.star}} stars from {{offerData.reviews.review}} reviews</p>
+            <p>{{offerData.reviews?.star}} stars from {{offerData.reviews?.review}} reviews</p>
         </div>
         <div class="date-whit-icons">
             <div>

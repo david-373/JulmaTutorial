@@ -44,7 +44,8 @@ import { DetalisComponent } from './components/settings/settings-child-component
 import { AddUserComponent } from './components/settings/settings-child-components/settings-users/dialog/add-user/add-user.component';
 import { AddCustomerComponent } from './components/settings/settings-child-components/settings-post-paid/dialog/add-customer/add-customer.component';
 import { FilterPipe } from './components/settings/settings-child-components/settings-post-paid/filter.pipe';
-import { SendNotaficationComponent } from './components/settings/settings-child-components/settings-post-paid/dialog/send-notafication/send-notafication.component'
+import { SendNotaficationComponent } from './components/settings/settings-child-components/settings-post-paid/dialog/send-notafication/send-notafication.component';
+import { AddNewOfferComponent } from './components/offers/dialog/add-new-offer/add-new-offer.component'
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -85,7 +86,8 @@ registerLocaleData(localeFr, 'fr');
     AddUserComponent,
     AddCustomerComponent,
     FilterPipe,
-    SendNotaficationComponent
+    SendNotaficationComponent,
+    AddNewOfferComponent
   ],
   imports: [
     BrowserModule,

@@ -23,7 +23,7 @@
                 </div>
                 <div>
                     <i class="fas fa-star"></i>
-                    <p>{{activeOffers.reviews.star}} stars from {{activeOffers.reviews.review}} reviews</p>
+                    <p>{{activeOffers.reviews?.star}} stars from {{activeOffers.reviews?.review}} reviews</p>
                 </div>
                 <div>
                     <i class="far fa-calendar"></i>
@@ -48,7 +48,7 @@
                 <h4 style="color: #ed1f2c; font-weight: 600;">
                     {{activeOffers.buyers.beforPrice  | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h4>
                 <p>{{activeOffers.date | date:'mediumTime'}}</p>
-                <button>Single offer</button>
+                <h3>{{activeOffers.Typeoffer}}</h3>
             </div>
         </div>
 
