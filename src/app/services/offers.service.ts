@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class OffersService {
   public activeOffersData = [
     {
+      id: 1,
       img: '../../../assets/images/Baebies_Thumb_new.jpg',
       fullName: 'Name name',
       city: 'Brismane City',
@@ -33,12 +34,13 @@ export class OffersService {
         afterPrice: 350,
         beforPrice: 150
       },
-      Typeoffer: 'Collection offer',
+      TypeOffer: 'Collection offer',
       TypeProduct: 'Package',
       Type: 'Box',
       stock: 300
     },
     {
+      id: 2,
       img: '../../../assets/images/Baebies_Thumb_new.jpg',
       fullName: 'Name name',
       city: 'Brismane City',
@@ -66,7 +68,7 @@ export class OffersService {
         afterPrice: 350,
         beforPrice: 150
       },
-      Typeoffer: 'Single offer',
+      TypeOffer: 'Single offer',
       TypeProduct: 'Clinic',
       Type: 'Piece',
       stock: 550
@@ -90,14 +92,17 @@ export class OffersService {
   city = 'Brismane City';
   date = new Date()
   addNewOffer(TypeOffer, TypeProduct, fullName, Type, stock, price) {
-
-    this.activeOffersData.push(new constructorActiveOffersData(this.img, fullName, this.city, this.date, price, TypeOffer, TypeProduct, Type, stock))
-    console.log(price);
-
+    this.activeOffersData.push(new constructorActiveOffersData(this.activeOffersData.length + 1, this.img, fullName, this.city, this.date, price, TypeOffer, TypeProduct, Type, stock))
+  }
+  deleteOffer(index) {
+    this.activeOffersData = this.activeOffersData.filter((data) => {
+      return data.id !== index
+    })
   }
   constructor() { }
 }
-function constructorActiveOffersData(img, fullName, city, date, price, TypeOffer, TypeProduct, Type, stock) {
+function constructorActiveOffersData(id, img, fullName, city, date, price, TypeOffer, TypeProduct, Type, stock) {
+  this.id = id
   this.img = img
   this.fullName = fullName
   this.city = city

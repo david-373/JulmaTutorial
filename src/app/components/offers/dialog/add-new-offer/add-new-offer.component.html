@@ -22,7 +22,9 @@
         </div>
         <div>
             <h3>Product name</h3>
-            <input type="text" placeholder="Enter your product name" #productName>
+            <input type="text" #productName>
+            <p *ngIf="productName.value.length <= 0" style="color: #0978be;position: absolute;font-size: 13px;">Please
+                enter name</p>
         </div>
         <div>
             <h3>Type</h3>
@@ -32,13 +34,16 @@
         </div>
         <div>
             <h3>Avilable stock</h3>
-            <input type="text" placeholder="500" #Stock>
+            <input #Stock>
+            <p *ngIf="Stock.value.length <= 0" style="color: #0978be; position: absolute;font-size: 13px;">Please enter
+                stock</p>
+
         </div>
         <div class="price">
             <h3>Price</h3>
 
             <select #priceBy>
-                <option value="" disabled selected hidden>Choose Gender...</option>
+                <option value="" disabled selected hidden>Choose Price...</option>
                 <option value="Buyers">Buyers</option>
                 <option value="Retailers">Retailers</option>
                 <option value="Wholesalers">Wholesalers</option>
@@ -88,6 +93,7 @@
                     </div>
                     <h4 (click)="addPrice(priceBy.value,price.value,parcent.value)" style="cursor: pointer;">Add price
                     </h4>
+                    <i class="fas fa-exclamation-circle" *ngIf="req"></i>
                 </div>
                 <div *ngFor="let pricedata of priceData;let i = index">
                     <h4 style="color: #585858;">{{pricedata.by}}</h4>
@@ -101,7 +107,8 @@
     </div>
     <div class="btns-div">
         <button style="background-color: #e8e8e8;" (click)="close()">Cancel</button>
-        <button style="background-color: #0978be;color: white;"
-            (click)="addNewOffer(offerType.value,productName.value,Stock.value);close()">Save</button>
+        <button type="submit" style="background-color: #0978be;color: white;"
+            (click)="addNewOffer(offerType.value,productName.value,Stock.value);close()"
+            [disabled]="Stock.value == '' || productName.value=='' ">Save</button>
     </div>
 </div>

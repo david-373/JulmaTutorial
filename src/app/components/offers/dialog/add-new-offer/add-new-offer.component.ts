@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
 import { OffersDialogData } from '../dialog.data';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { OffersService } from 'src/app/services';
@@ -13,7 +13,6 @@ export class AddNewOfferComponent implements OnInit {
   Pharmacy = false;
   Clinic = false;
   Mall = false;
-
   selectTypeProduct(type) {
 
     this.ProductType = type
@@ -96,9 +95,15 @@ export class AddNewOfferComponent implements OnInit {
   priceData = []
   by: string;
   price: number;
-  priceItog: number
+  priceItog: number;
+  req = false
   addPrice(by, price, pracent) {
-    console.log(by)
+    if (by == '' || price == '' || pracent == '') {
+      this.req = true
+      return
+    } else {
+      this.req = false
+    }
     if (this.priceData.length >= 3) {
       return
     }
@@ -115,10 +120,14 @@ export class AddNewOfferComponent implements OnInit {
   }
   close() {
     this.dialogRef.close()
+
   }
+
+
   ProductType: string
   Type: string
   addNewOffer(typeOffer, name, stock) {
+
     this.offersService.addNewOffer(typeOffer, this.ProductType, name, this.Type, stock, this.priceData)
   }
   constructor(

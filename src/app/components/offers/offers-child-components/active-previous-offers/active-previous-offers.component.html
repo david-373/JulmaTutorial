@@ -1,11 +1,12 @@
-<app-active-offers-detalis *ngIf="detalisActiv" [offerData]='DataForSingleOfferDetalis'></app-active-offers-detalis>
+<app-active-offers-detalis *ngIf="detalisActiv" [offerData]='DataForSingleOfferDetalis' (oferDeleted)="offerDeleted()">
+</app-active-offers-detalis>
 
 <div *ngIf="!detalisActiv">
 
-    <div>
+    <div id="resfresh">
 
         <h4 style="color: #262626;">Active offers</h4>
-        <div class="active-offers-div" *ngFor="let activeOffers of activeOffersData"
+        <div class="active-offers-div" *ngFor="let activeOffers of activeOffersData;"
             (click)="goToDetalis(this.activeOffers)">
             <div class="img">
                 <img src="{{activeOffers.img}}" alt="">
@@ -48,7 +49,7 @@
                 <h4 style="color: #ed1f2c; font-weight: 600;">
                     {{activeOffers.buyers.beforPrice  | currency:'USD':'symbol-narrow':'1.0-0':'fr'}}</h4>
                 <p>{{activeOffers.date | date:'mediumTime'}}</p>
-                <h3>{{activeOffers.Typeoffer}}</h3>
+                <h3>{{activeOffers.TypeOffer}}</h3>
             </div>
         </div>
 
@@ -114,5 +115,4 @@
             </div>
         </div>
     </div>
-
 </div>

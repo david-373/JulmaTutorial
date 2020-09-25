@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { OffersService } from 'src/app/services';
 
 @Component({
   selector: 'app-active-offers-detalis',
@@ -7,10 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ActiveOffersDetalisComponent implements OnInit {
   @Input() offerData;
-  constructor() { }
+  @Output() oferDeleted = new EventEmitter()
+  removeOffer() {
+    this.offersService.deleteOffer(this.offerData.id)
+    this.oferDeleted.emit()
+  }
+  constructor(private offersService: OffersService) { }
 
   ngOnInit(): void {
-    
+
   }
 
 }

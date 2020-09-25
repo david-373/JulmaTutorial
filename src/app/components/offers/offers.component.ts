@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { OffersService } from 'src/app/services';
 import { AddNewOfferComponent } from './dialog/add-new-offer/add-new-offer.component';
 import { MatDialog } from '@angular/material/dialog'
@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog'
   styleUrls: ['./offers.component.scss']
 })
 export class OffersComponent implements OnInit {
+  CloseDetalis = false
   offerActiv = false;
   onSelectOffer() {
     this.offerActiv = !this.offerActiv
@@ -31,6 +32,7 @@ export class OffersComponent implements OnInit {
   constructor(private offersService: OffersService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
+
   }
 
 }
